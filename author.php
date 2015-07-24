@@ -2,7 +2,7 @@
 <section id="content" role="main">
 	<header class="header">
 		<?php the_post(); ?>
-		<h1 class="entry-title author"><?php _e( 'Author Archives', 'dp' ); ?>: <?php the_author_link(); ?></h1>
+		<h1 class="entry-title author"><?php _e( 'Author Archives', 'bo' ); ?>: <?php the_author_link(); ?></h1>
 		<div class="well">
 			<?php if ( '' != get_the_author_meta( 'user_description' ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta entry-content">' . get_the_author_meta( 'user_description' ) . '</div>' ); ?>
 			<?php rewind_posts(); ?>

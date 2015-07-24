@@ -1,5 +1,5 @@
 {
-  "name": "Doble Página",
+  "name": "bo",
   "version": "0.0.1",
   "homepage": "http://www.hspencer.info/theme",
   "author": "Herbert Spencer",
@@ -11,7 +11,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.2",
-    "pixograms": "https://github.com/eadpucv/pixograms.git"
+    "bootstrap": "3.0.2",
+    "stampa": "https://github.com/eadpucv/stampa.git"
   }
 }

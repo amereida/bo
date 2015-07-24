@@ -1,5 +1,5 @@
 <footer class="entry-footer">
-<span class="cat-links"><?php _e( 'Categories: ', 'dp' ); ?><?php the_category( ', ' ); ?></span>
+<span class="cat-links"><?php _e( 'Categories: ', 'bo' ); ?><?php the_category( ', ' ); ?></span>
 <span class="tag-links">
 	<?php
 		$posttags = get_the_tags();
@@ -13,6 +13,6 @@
 	?>
 </span>
 <?php if ( comments_open() ) { 
-echo '<span class="meta-sep">|</span> <span class="comments-link"><a href="' . get_comments_link() . '">' . sprintf( __( 'Comments', 'dp' ) ) . '</a></span>';
+echo '<span class="meta-sep">|</span> <span class="comments-link"><a href="' . get_comments_link() . '">' . sprintf( __( 'Comments', 'bo' ) ) . '</a></span>';
 } ?>
 </footer> 

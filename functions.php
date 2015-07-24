@@ -10,7 +10,7 @@ function dp_setup()
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 640;
 	register_nav_menus(
-		array( 'main-menu' => __( 'Main Menu', 'dp' ) )
+		array( 'main-menu' => __( 'Main Menu', 'bo' ) )
 		);
 	/*
 	 * Enable support for Post Formats.
@@ -58,7 +58,7 @@ add_action( 'widgets_init', 'dp_widgets_init' );
 function dp_widgets_init()
 {
 	register_sidebar( array (
-		'name' => __( 'Sidebar Widget Area', 'dp' ),
+		'name' => __( 'Sidebar Widget Area', 'bo' ),
 		'id' => 'primary-widget-area',
 		'before_widget' => '<div id="%1$s" class="col-sm-6 widget-container %2$s"><div class="well">',
 		'after_widget' => "</div></div>",

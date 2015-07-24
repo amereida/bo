@@ -15,6 +15,7 @@
 		?>
 	</div>
 	<div class="row">
+		<!--
 		<div class="col-sm-6">
 			<div class="well">
 					<div class="anti-well-with-text">
@@ -34,9 +35,10 @@
 				<?php dynamic_sidebar( 'for singles' ); ?>
 			</div>
 		</div>
-		<div class="col-sm-6">
+		-->
+		<div class="col-sm-6 col-sm-offset-3">
 			<div class="well">
-				<?php echo edit_post_link( "edit" ); ?> 
+				<?php echo edit_post_link( "lapiz" ); ?> 
 				<div class="content-entry">
 					<?php echo get_the_content(); ?>
 				</div>

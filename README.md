@@ -1,20 +1,20 @@
-Doble Página
-============
-Tema flexible para Wordpress
-v1.1.0
+bo
+==
+
+Tema tipográficamente elemental para Wordpress
+v0.0.1
 
 <pre>
- ***********************************
- *                *                *
- *                *                *
- *                *                *
- *                *                *
- *                *                *
- *                *                *
- *                *                *
- *                *                *
- *                *                *
- *********************************** 
+ **********************************
+ *                                *
+ *        *                       *
+ *        *                       *
+ *        *****      ****         *
+ *        *    *    *    *        *
+ *        *    *    *    *        *
+ *        *****      ****         *
+ *                                *
+ ********************************** 
 </pre>
 
 ## Requeriemientos para Desarrollo
@@ -24,7 +24,7 @@ v1.1.0
 
 ## Dependencias
 * [bootstrap](http://www.getbootstrap)
-* [pixograms](http://eadpucv.github.io/pixograms)
+* [stampa](http://eadpucv.github.io/stampa)
 
 ## Plugins Compatibles
 * [Github-updater](https://github.com/afragen/github-updater/tree/master): Para actualizar el tema desde wordpress

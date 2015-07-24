@@ -1,0 +1,26 @@
+// Mixins
+// --------------------------
+
+.icon-rotate(@degrees, @rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@rotation);
+  -webkit-transform: rotate(@degrees);
+     -moz-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+       -o-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+
+.icon-flip(@horiz, @vert, @rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@rotation, mirror=1);
+  -webkit-transform: scale(@horiz, @vert);
+     -moz-transform: scale(@horiz, @vert);
+      -ms-transform: scale(@horiz, @vert);
+       -o-transform: scale(@horiz, @vert);
+          transform: scale(@horiz, @vert);
+}
+
+.icn-rotate-90  { .icon-rotate(90deg, 1);  }
+
+.icn-rotate-180  { .icon-rotate(180deg, 2);  }
+
+.icn-rotate-270  { .icon-rotate(270deg, 3);  }

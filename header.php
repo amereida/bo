@@ -20,12 +20,13 @@
 			<div class='container container-fluid'>
 				<section class='navbar-header' id='branding'>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#walker">
-						<span class="sr-only">Toggle navigation</span>
+						<span class="sr-only">control del menu</span>
+						<!-- <span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> -->
+						<span class='icn icn-menu'></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'dp' ); ?>" rel='home'>
+					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'bo' ); ?>" rel='home'>
 						<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 					</a>
 				</section>

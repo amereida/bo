@@ -20,7 +20,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="well">
-				<?php echo edit_post_link( "edit" ); ?> 
+				<?php echo edit_post_link( "lapiz" ); ?> 
 				<div class="content-entry">
 					<?php echo get_the_content(); ?>
 				</div>

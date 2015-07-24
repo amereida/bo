@@ -4,6 +4,7 @@
 </header>
 
 <div class="row">
+	<!--
 	<div class="col-sm-6 hidden-xs">
 		<div class="well">
 			<div class="anti-well">
@@ -21,9 +22,10 @@
 			<?php dynamic_sidebar( 'for pages' ); ?>
 		</div>
 	</div>
-	<div class="col-sm-6">
+	-->
+	<div class="col-sm-8 col-sm-offset-2">
 		<section id="content" role="main" class='well'>
-			<?php edit_post_link("edit"); ?>
+			<?php edit_post_link("lapiz"); ?>
 			<div class="entry-content">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

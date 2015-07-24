@@ -1,19 +1,19 @@
 /*
-Theme Name:		'Doble Página'
-Theme URI:		http://hspencer.info/about/dp
-Version:		1.0.0;
-Author:			Herbert Spencer
+Theme Name:		'bo'
+Theme URI:		http://amereida.cl/colofon
+Version:		0.0.1;
+Author:			Taller de Construcción 2015, Herbert Spencer
 Author URI:		http://hspencer.info/
-Description:	Booklike readingeske experience, this is a double page spread, two pages facing each other. On the left side you have te general topic map, the links, the territory. On the right side, you have the detail, the voyage, the temporal flow of discourse.
+Description:	Tema Tipográficamente elemental
 License:		Artistic License 2.0
 License URI:	http://opensource.org/licenses/Artistic-2.0
 
-Tags: bootstrap, less, clean, roboto slab, source sans pro, blocks, responsive, book 
-Text Domain: dp
+Tags: simple, bootstrap, less, clean, blocks, responsive 
+Text Domain: bo
 
-GitHub Theme URI: https://github.com/hspencer/dp
+GitHub Theme URI: https://github.com/amereida/bo
 GitHub Branch: master
 
 */
 
-@import 'dp.css';
+@import 'bo.css';
