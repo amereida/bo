@@ -4,18 +4,7 @@ bo
 Tema tipográficamente elemental para Wordpress
 v0.0.1
 
-<pre>
- **********************************
- *                                *
- *        *                       *
- *        *                       *
- *        *****      ****         *
- *        *    *    *    *        *
- *        *    *    *    *        *
- *        *****      ****         *
- *                                *
- ********************************** 
-</pre>
+![bo](screenshot.png)
 
 ## Requeriemientos para Desarrollo
 * node.js
