@@ -51,9 +51,11 @@ a.navbar-brand {
 
 #nav-below{
 	margin: 1ex 0 0 0;
+	font-family: @font-family-sans-serif;
 	a{
-		.btn;
-		.btn-default;
+		//.btn;
+		//.btn-default;
+		color: fade(@gray-dark, 30);
 		.btn-xs;
 		text-transform: uppercase;
 		font-weight: 700;
@@ -65,6 +67,7 @@ a.navbar-brand {
 .post-edit-link{
 	display: block;
 	position: absolute;
+	z-index: 2000;
 	top: 0;
 	right: 0;
 	font-family: Stampa;
@@ -103,12 +106,15 @@ a.navbar-brand {
 // Single and general content
 
 .huge{
-	font-size: 6em;
-	line-height: 90%;
+	font-size: 2em;
+	font-family: @font-family-serif;
 	.hyphens(auto);
 	.longShadow(@gray-lighter, 12);
 	font-weight: 100;
-	margin: .5ex 0;
+	color: @brand-primary;
+	text-transform: uppercase;
+	letter-spacing: .1ex;
+	margin: 2.5ex 0;
 }
 
 .huge-entry-title{
@@ -131,7 +137,7 @@ a.navbar-brand {
 
 .content-entry:first-child,
 .entry-content:first-child{
-	&p:first-of-type:first-letter{
+	&:first-of-type:first-letter{
 	display: inline-block;
 	font-family: @font-family-serif;
 	float: left;
@@ -139,6 +145,10 @@ a.navbar-brand {
 	margin: 8px 10px 0 0px;
 	font-size: 3.2em !important;
 	line-height: .75em;
+	color: @gray-dark; 
+	}
+	p, ul, ol{
+		color: fade(@gray-dark, 50); 
 	}
 }
 
@@ -176,10 +186,8 @@ a.navbar-brand {
 	.clearfix;
 	position: relative;
 	padding: @well-padding;
-	// margin-bottom: @shadow-length-px;
 	border: 0px solid transparent;
 	overflow: hidden;
-	// .shadow;
 	img:first-child{
 		padding-top: 0;
 		margin-top: -@well-padding;
@@ -220,9 +228,8 @@ a.navbar-brand {
 
 .aftershadow{
 	background-color: fade(@shadow-color, 40);
-	// margin: -@shadow-length-px/2 @shadow-length-px/2 0 @shadow-length-px;
-	// .box-shadow(@shadow-length-px 0 0 0 fade(@shadow-color, 40));
 	padding: @line-height-computed;
+	margin-top: -20px;
 }
 
 
@@ -267,7 +274,8 @@ img{
 
 .labels{
 	line-height: 80%;
-	text-align: right;
+	font-family: @font-family-sans-serif;
+	// text-align: right;
 }
 
 .label{
@@ -308,8 +316,14 @@ a[rel="category"]{
 }
 
 
+// Para los archivos
+
+.abstract{
+	height: 20em;
+}
 
 .entry-footer{
+	font-family: @font-family-sans-serif;
 	font-weight: 700;
 }
 // Forms

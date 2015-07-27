@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 <header class="header">
-	<h1 class='huge-entry-title'><?php echo get_the_title(); ?></h1>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<h1 class='entry-title'><?php echo get_the_title(); ?></h1>
+		<?php edit_post_link("lapiz"); ?>
+	<?php endwhile; endif; ?>
 </header>
 
 <div class="row">

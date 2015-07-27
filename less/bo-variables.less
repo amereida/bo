@@ -30,12 +30,12 @@
 // Scaffolding
 
 @body-bg:               #F9F9F9;
-@text-color:            @gray-dark;
+@text-color:            fade(@gray-dark, 70); 
 
 // Personal quirks
 @well-padding: 			 32px;
-@shadow-length: 		 16;
-@shadow-length-px: 		 16px;
+@shadow-length: 		 4;
+@shadow-length-px: 		 4px;
 @shadow-color: 			 darken(@body-bg, 5);
 
 
@@ -47,7 +47,7 @@
 
 
 @font-family-sans-serif:  "Open Sans", sans-serif;
-@font-family-serif:       "Merriweather", serif;
+@font-family-serif:       "Vollkorn", serif;
 @font-family-monospace:   Menlo, Monaco, Consolas, 'Courier New', monospace;
 @font-family-base:        @font-family-serif;
 
@@ -256,7 +256,7 @@
 // Navbar collapse
 
 // Point at which the navbar becomes uncollapsed
-@grid-float-breakpoint:     1920px;
+@grid-float-breakpoint:     2222px;
 
 // Point at which the navbar begins collapsing
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);

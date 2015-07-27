@@ -16,7 +16,7 @@
 	</div>
 	<h1 class='huge-entry-title'><?php echo get_the_title(); ?></h1>
 	<?php get_template_part( 'entry', 'meta' ); ?> 
-	
+	<?php edit_post_link("lapiz"); ?>
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="well">
