@@ -28,8 +28,71 @@
 .wp-caption{
 	font-size: 12px;
 	font-family: @font-family-sans-serif;
-	
+	display: block;
+	/*
+	.anti-well-horizontal;
+	width: 100% + (@well-padding) * 2 !important;
+	*/
+	margin: 0 -8%;
+	width: 116% !important;
+
 	.wp-caption-text{
-		padding: 1em 0;
+		padding: 0 @well-padding;
+		color: @gray-dark !important;
 	}
 }
+
+.full-width{
+	margin: @line-height-computed/2 0;
+	width: 100% !important;
+	height: auto;
+}
+
+
+img.size-full,
+img.size-large{
+	.full-width;
+}
+
+img{
+	&.size-full,
+	&.size-large{
+		.full-width;
+	}
+	&.alignleft{
+		float: left;
+		margin: 1em 1em 1em 0;
+	}
+	&.alignright{
+		float: right;
+		margin: 1em 0 1em 1em;
+	}
+}
+
+
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+}
+
+// Phones and Tablets
+@media(max-width: @screen-sm-max){
+
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+
+

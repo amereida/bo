@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 <header class="header">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<h1 class='entry-title'><?php echo get_the_title(); ?></h1>
+		<h1 class='entry-title page-entry-title'><?php echo get_the_title(); ?></h1>
 		<?php edit_post_link("lapiz"); ?>
 	<?php endwhile; endif; ?>
 </header>
+
+<?php edit_post_link("lapiz"); ?>
 
 <div class="row">
 	<!--
@@ -16,7 +18,7 @@
 						the_post_thumbnail('large');
 					}
 					else {
-						echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/rotate.php" />';
+						echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
 					}
 				?>
 			</div>
@@ -28,7 +30,6 @@
 	-->
 	<div class="col-sm-8 col-sm-offset-2">
 		<section id="content" role="main" class='well'>
-			<?php edit_post_link("lapiz"); ?>
 			<div class="entry-content">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

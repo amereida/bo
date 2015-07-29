@@ -4,20 +4,21 @@
 //
 //
 
+// ruta de bootstrap
 @bootstrap-path: '../bower_components/bootstrap/less/';
 
-
-// Core variables and mixins
+// core variables and mixins
 @import 'bo-variables.less';
 @import 'bo-webfonts';
 @import '@{bootstrap-path}mixins.less';
 
 @import 'bo-mixins';
-// Reset
+
+// reset
 @import '@{bootstrap-path}normalize.less';
 @import '@{bootstrap-path}print.less';
 
-// Core CSS
+// core CSS
 @import '@{bootstrap-path}scaffolding.less';
 @import '@{bootstrap-path}type.less';
 @import '@{bootstrap-path}code.less';
@@ -26,7 +27,7 @@
 @import '@{bootstrap-path}forms.less';
 @import '@{bootstrap-path}buttons.less';
 
-// Components
+// components
 @import '@{bootstrap-path}component-animations.less';
 // @import '@{bootstrap-path}glyphicons.less';
 @import '@{bootstrap-path}dropdowns.less';
@@ -46,18 +47,24 @@
 // @import '@{bootstrap-path}media.less';
 // @import '@{bootstrap-path}list-group.less';
 // @import '@{bootstrap-path}panels.less';
-@import '@{bootstrap-path}wells.less';
+// @import '@{bootstrap-path}wells.less';
 // @import '@{bootstrap-path}close.less';
 
-// Components w/ JavaScript
+// components w/ JavaScript
 // @import '@{bootstrap-path}modals.less';
 // @import '@{bootstrap-path}tooltip.less';
 // @import '@{bootstrap-path}popovers.less';
-@import '@{bootstrap-path}carousel.less';
+// @import '@{bootstrap-path}carousel.less';
 
-// Utility classes
+// utility classes
+
 @import '@{bootstrap-path}utilities.less';
 @import '@{bootstrap-path}responsive-utilities.less';
+
+// bo
+
 @import 'bo-custom';
+@import 'bo-wells';
 @import 'bo-widgets';
 @import 'bo-media';
+@import 'bo-archive';

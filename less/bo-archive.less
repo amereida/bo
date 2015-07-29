@@ -1,0 +1,65 @@
+//
+//
+// bo - archive
+//
+//
+
+
+.abstract{
+	position: relative;
+	height: 20em;
+	overflow: hidden;
+	font-size: 0.7em;
+
+	
+	header{
+		.tags{
+			margin: 0 0 1ex 0;
+		}
+		h2.entry-title a{
+			font-size: .7em;
+			text-transform: uppercase;
+		}
+	}
+	.entry-summary{
+		text-align: justify;
+		font-size: .9em;
+		.hyphens(auto);
+		// line-height: 100%;
+	}
+	header{
+		.post-edit-link{
+			position: absolute;
+			.size(32, 32);
+			font-size: 12px;
+			line-height: 32px;
+			top: 0;
+			right: 0;
+		}
+	}
+	
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+}
+
+// Phones and Tablets
+@media(max-width: @screen-sm-max){
+
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}

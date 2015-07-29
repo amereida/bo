@@ -2,13 +2,13 @@
 <section id="content" role="main">
 	<article id="post-0" class="post not-found">
 		<header class="header">
-			<h1 class="huge-entry-title"><?php _e( 'Not Found', 'bo' ); ?></h1>
+			<!-- <h1 class="huge-entry-title"><?php _e( 'Not Found', 'bo' ); ?></h1> -->
 		</header>
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="well">
 					<div class="anti-well">
-						<?php echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/rotate.php" />'; ?>
+						<?php echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />'; ?>
 					</div>
 				</div>
 			</div>

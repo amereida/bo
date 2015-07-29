@@ -1,0 +1,63 @@
+//
+//
+// bo - wells
+//
+//
+
+// base
+
+.well{
+	.clearfix;
+	min-height: 20px;
+	position: relative;
+	padding: @well-padding;
+	background-color: @well-bg;
+	border: 0px solid transparent;
+
+	blockquote {
+		border-color: #ddd;
+		border-color: rgba(0,0,0,.15);
+	}
+}
+
+// tamaños
+
+.well-lg {
+  padding: 24px;
+  border-radius: @border-radius-large;
+}
+.well-sm {
+  padding: 9px;
+  border-radius: @border-radius-small;
+}
+
+
+.well-transparent{
+	position: relative;
+	padding: @well-padding;
+	overflow: hidden;
+}
+
+.anti-well{
+	margin: -@well-padding -@well-padding -@well-padding -@well-padding !important;
+	text-align: center;
+	.max,
+	img{
+		width: 100%;
+		height: auto;
+		vertical-align: bottom;
+	}
+}
+
+.anti-well-horizontal{
+		margin: 0 -@well-padding;
+}
+
+.anti-well-with-text{
+	margin: -@well-padding -@well-padding 0 -@well-padding;
+	.max,
+	img{
+		width: 100%;
+		height: auto;
+	}
+}

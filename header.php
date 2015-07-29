@@ -21,14 +21,14 @@
 				<section class='navbar-header' id='branding'>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#walker">
 						<span class="sr-only">control del menu</span>
-						<!-- <span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span> -->
-						<span class='icn icn-menu'></span>
+						<!--<span class='icn icn-menu'></span>-->
+						<?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca-iso.png" />'; ?>
 					</button>
+					<!--
 					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'bo' ); ?>" rel='home'>
 						<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 					</a>
+					-->
 				</section>
 				<div id='walker' class='collapse navbar-collapse'>
 					<nav id='menu' role='navigation'>
@@ -45,7 +45,7 @@
 						);
 						?>
 						<form action="<?php echo home_url( '/' ); ?>" method="get" class="navbar-form navbar-right" role="search">
-							<div class="form-group">
+							<div class="form-group form-search">
 								<input type="text" name="s" class="form-control" placeholder="Buscar..." id="search" value="<?php the_search_query(); ?>" />
 							</div>
 						</form>

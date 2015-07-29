@@ -1,9 +1,9 @@
 <?php
-add_action( 'after_setup_theme', 'dp_setup' );
+add_action( 'after_setup_theme', 'bo_setup' );
 
-function dp_setup()
+function bo_setup()
 {
-	load_theme_textdomain( 'dp', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'bo', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'html5', array( 'search-form' ) );
@@ -24,38 +24,38 @@ function dp_setup()
 	add_post_type_support( 'post', 'post-formats' );
 }
 
-add_action( 'wp_enqueue_scripts', 'dp_load_scripts' );
+add_action( 'wp_enqueue_scripts', 'bo_load_scripts' );
 
-function dp_load_scripts()
+function bo_load_scripts()
 {
 	wp_enqueue_script( 'jquery' );
 }
 
-add_action( 'comment_form_before', 'dp_enqueue_comment_reply_script' );
+add_action( 'comment_form_before', 'bo_enqueue_comment_reply_script' );
 
-function dp_enqueue_comment_reply_script()
+function bo_enqueue_comment_reply_script()
 {
 	if ( get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
 }
-add_filter( 'the_title', 'dp_title'	 );
+add_filter( 'the_title', 'bo_title'	 );
 
-function dp_title( $title ) {
+function bo_title( $title ) {
 	if ( $title == '' ) {
 		return '&rarr;';
 	} else {
 		return $title;
 	}
 }
-add_filter( 'wp_title', 'dp_filter_wp_title' );
+add_filter( 'wp_title', 'bo_filter_wp_title' );
 
-function dp_filter_wp_title( $title )
+function bo_filter_wp_title( $title )
 {
 	return $title . esc_attr( get_bloginfo( 'name' ) );
 }
-add_action( 'widgets_init', 'dp_widgets_init' );
+add_action( 'widgets_init', 'bo_widgets_init' );
 
 
-function dp_widgets_init()
+function bo_widgets_init()
 {
 	register_sidebar( array (
 		'name' => __( 'Sidebar Widget Area', 'bo' ),
@@ -112,16 +112,16 @@ if ( function_exists('register_sidebar') ) {
 		));
 }
 
-function dp_custom_pings( $comment )
+function bo_custom_pings( $comment )
 {
 	$GLOBALS['comment'] = $comment;
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
 	<?php 
 }
-add_filter( 'get_comments_number', 'dp_comments_number' );
+add_filter( 'get_comments_number', 'bo_comments_number' );
 
-function dp_comments_number( $count )
+function bo_comments_number( $count )
 {
 	if ( !is_admin() ) {
 		global $id;
@@ -166,5 +166,17 @@ function registerWidePosts() {
 		) ); 
 }
 */
+
 require_once('wp_bootstrap_navwalker.php');
+
+
+/* remove hardcoded width and height attributes from images in html */
+
+
+function strip_img_dimensions( $html, $post_id, $post_image_id ) {
+$html = preg_replace( '/(width|height)="d*"s/', "", $html );
+return $html;}
+
+add_filter( 'post_thumbnail_html', 'strip_img_dimensions', 10, 3 );
+add_filter( 'post_html', 'strip_img_dimensions', 10, 3 );
 
