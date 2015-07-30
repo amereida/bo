@@ -13,7 +13,7 @@
 				echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
 			}
 		?>-->
-		<h1 class='huge'><?php echo get_the_title(); ?></h1>
+		<h1 class='post-title'><?php echo get_the_title(); ?></h1>
 				<span class='post-date'><?php the_time('F j, Y'); ?></span> 
 				<!-- <?php get_template_part( 'entry', 'meta' ); ?> -->
 		</div>
@@ -48,7 +48,10 @@
 				<article class="entry-content">
 					<?php echo the_content(); ?>
 				</article>
-				<div class="labels">Archivado en: 
+				
+				<?php echo GeoMashup::map(); ?>
+
+				<div class="labels pull-right">Archivado en: 
 					<?php
 						$posttags = get_the_tags();
 						if ($posttags) {

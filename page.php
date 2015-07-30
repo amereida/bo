@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <header class="header">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<h1 class='entry-title page-entry-title'><?php echo get_the_title(); ?></h1>
+		<h1 class='page-title'><?php echo get_the_title(); ?></h1>
 		<?php edit_post_link("lapiz"); ?>
 	<?php endwhile; endif; ?>
 </header>
