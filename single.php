@@ -49,7 +49,10 @@
 					<?php echo the_content(); ?>
 				</article>
 				
-				<?php echo GeoMashup::map(); ?>
+				<!-- GeoMashup -->
+				<div id="geomashup">
+                	<?php echo GeoMashup::map('width=100%'); ?>
+       			</div>
 
 				<div class="labels pull-right">Archivado en: 
 					<?php
