@@ -112,6 +112,28 @@ if ( function_exists('register_sidebar') ) {
 		));
 }
 
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'Footer left',
+		'id' => 'footer-left',
+		'before_widget' => '<div id="%1$s" class="col-sm-6 footer-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		));
+}
+
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'Footer right',
+		'id' => 'footer-right',
+		'before_widget' => '<div id="%1$s" class="col-sm-6 footer-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		));
+}
+
 function bo_custom_pings( $comment )
 {
 	$GLOBALS['comment'] = $comment;
