@@ -20,9 +20,16 @@ h2{
 	margin: 100px 0;
 }
 
+h3{
+	font-weight: 100;
+	color:#b0821c;
+}
+
 p{
 	line-height: 2em;
 }
+
+/* NAVBAR */
 
 .navbar-brand img{
 	max-width: 120px;
@@ -38,13 +45,15 @@ p{
 	font-weight: 100;
 }
 
+/* FOOTER */
+
 .footer-container ul{
 	padding: 0;
 	list-style: none;
 }
 
 .footer-container li{
-	color: #CDCFCF;
+	color: #CDCFCF; /* @brand-primery */
 	padding-top: 15px;
 	font-family: "Maven Pro";
 	font-weight: 100;
@@ -54,13 +63,15 @@ p{
 	color: #FFF;
 }
 
+/* JUMBO FOTO */
+
 .jumbo-foto{
 	position: relative;
 }
 
 h1{
 	height: 60px;
-	background: rgba(0,0,0,0.9);
+	background: rgba(0,0,0,0.85);
 	font-weight: 100;
 	color: #fff;
 	text-transform: uppercase;
@@ -68,12 +79,15 @@ h1{
 	padding-top: 20px;
 	padding-left: 30px;
 	letter-spacing: 7px;
+	margin-top: 100px;
 }
 
 .jumbo-foto h1{
 	position: absolute;
 	bottom: 0;
 }
+
+/* BOTONES */
 
 .btn-primary{
 	font-family: "Maven Pro";
@@ -90,6 +104,8 @@ h1{
 	margin: 70px 0;
 }
 
+/* FORMULARIO */
+
 form{
 	font-family: "Maven Pro"
 }
@@ -104,4 +120,35 @@ form select{
 
 form textarea{
 	border: 2px solid #b0821c !important;
+}
+
+/* MÓDULOS NOTICIAS */
+
+.thumbnail{
+	background: #CDCFCF;
+}
+
+.thumbnail-img{
+	max-height: 250px;
+	overflow: hidden;
+}
+
+.thumbnail img{
+	width: 100%;
+}
+
+.fecha{
+
+}
+
+.caption{
+	padding: 15px;
+}
+
+.caption h3{
+	font-weight:100;
+}
+
+.caption p{
+
 }
