@@ -4,8 +4,20 @@ body{
 	background: #fff;
 }
 
+strong{
+	color: #000; /* @black */
+}
+
+.container{
+	margin-top: 80px;
+}
+
 header{
 	margin-bottom: 90px;
+}
+
+header .container{
+	margin-top: 0;
 }
 
 h1,h2,h3{
@@ -17,7 +29,7 @@ h2{
 	border-bottom: 1px solid #000;
 	font-weight: 100;
 	letter-spacing: 5px;
-	margin: 100px 0;
+	margin-bottom: 100px;
 }
 
 h3{
