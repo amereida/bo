@@ -7,3 +7,24 @@
 .navbar-toggle{
 	float:right;
 }
+
+.dropdown-toggle{
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.footer-container ul{
+	padding: 0;
+	list-style: none;
+}
+
+.footer-container li{
+	color: #CDCFCF;
+	padding-top: 15px;
+	font-family: "Maven Pro";
+	font-weight: 100;
+}
+
+.footer-container li:hover{
+	color: #FFF;
+}
