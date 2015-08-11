@@ -8,7 +8,7 @@ header{
 	margin-bottom: 90px;
 }
 
-h1,h2{
+h1,h2,h3{
 	text-transform: uppercase;
 }
 
@@ -97,7 +97,7 @@ h1{
 	color: #b0821c;
 	border: 2px solid;
 	border-radius: 5px;
-	width: 40%;
+	width: 35%;
 }
 
 .btn-lg{
@@ -125,7 +125,15 @@ form textarea{
 /* MÓDULOS NOTICIAS */
 
 .thumbnail{
-	background: #CDCFCF;
+	background: #fff;
+}
+
+.thumbnail a{
+	color:#514C5A; /* @gray-darker */
+}
+
+.thumbnail:hover{
+	background: #CDCFCF; /* @gray-lighter */
 }
 
 .thumbnail-img{
@@ -138,7 +146,7 @@ form textarea{
 }
 
 .fecha{
-
+	font-family: "Maven Pro"
 }
 
 .caption{
@@ -146,9 +154,9 @@ form textarea{
 }
 
 .caption h3{
-	font-weight:100;
+	text-transform: none;
 }
 
 .caption p{
-
+	font-size: 0.7em;
 }
