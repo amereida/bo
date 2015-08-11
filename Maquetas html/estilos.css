@@ -1,5 +1,9 @@
 /* NAVBAR */
 
+body{
+	background: #fff;
+}
+
 header{
 	margin-bottom: 90px;
 }
@@ -13,6 +17,11 @@ h2{
 	border-bottom: 1px solid #000;
 	font-weight: 100;
 	letter-spacing: 5px;
+	margin: 100px 0;
+}
+
+p{
+	line-height: 2em;
 }
 
 .navbar-brand img{
@@ -60,4 +69,36 @@ h2{
 	width: 100%;
 	padding-top: 20px;
 	padding-left: 30px;
+	letter-spacing: 7px;
+}
+
+.btn-primary{
+	font-family: "Maven Pro";
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	background: none;
+	color: #AA8935;
+	border: 2px solid;
+	border-radius: 5px;
+	width: 40%;
+}
+
+.btn-lg{
+	margin: 70px 0;
+}
+
+form{
+	font-family: "Maven Pro"
+}
+
+form input{
+	border: 2px solid #AA8935 !important;
+}
+
+form select{
+	border: 2px solid #AA8935 !important;	
+}
+
+form textarea{
+	border: 2px solid #AA8935 !important;
 }
