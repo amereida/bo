@@ -4,12 +4,24 @@ header{
 	margin-bottom: 90px;
 }
 
+h1,h2{
+	text-transform: uppercase;
+}
+
+h2{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #000;
+	font-weight: 100;
+	letter-spacing: 5px;
+}
+
 .navbar-brand img{
 	max-width: 120px;
 }
 
 .navbar-toggle{
 	float:right;
+	margin-top: 50px;
 }
 
 .dropdown-toggle{
