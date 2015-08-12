@@ -30,7 +30,7 @@
 
 // Scaffolding
 
-@body-bg:               #F9F9F9;
+@body-bg:               @white;
 @text-color:            fade(@gray-dark, 70); 
 
 // Personal quirks
@@ -47,7 +47,7 @@
 // Typography
 
 
-@font-family-sans-serif:  "Merriweather Sans", sans-serif;
+@font-family-sans-serif:  "Maven Pro", sans-serif;
 @font-family-serif:       "Merriweather", serif;
 @font-family-monospace:   Menlo, Monaco, Consolas, 'Courier New', monospace;
 @font-family-base:        @font-family-serif;
@@ -67,7 +67,7 @@
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
 @headings-font-family:    @font-family-sans-serif;
-@headings-font-weight:    700;
+@headings-font-weight:    100;
 @headings-line-height:    1.1;
 @headings-color:          @black;
 
@@ -98,8 +98,7 @@
 
 @border-radius-base:             0; //4px;
 @border-radius-large:            0; //6px;
-@border-radius-small:            0; //3px;
-
+@border-radius-small:            5px; //5px;
 @component-active-color:         #fff;
 @component-active-bg:            @brand-primary;
 
@@ -121,15 +120,15 @@
 
 // Buttons
 
-@btn-font-weight:                normal;
+@btn-font-weight:                100;
 
 @btn-default-color:              fade(@black, 25);
 @btn-default-bg:                 @shadow-color;
 @btn-default-border:             darken(@shadow-color, 5);
 
-@btn-primary-color:              #fff;
-@btn-primary-bg:                 @brand-primary;
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-color:              @yellow;
+@btn-primary-bg:                 @white;
+@btn-primary-border:             @yellow;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
@@ -159,9 +158,9 @@
 @input-bg:                       @white; 
 @input-bg-disabled:              @body-bg;
 
-@input-color:                    @gray;
-@input-border:                   transparent; 
-@input-border-radius:            @border-radius-base;
+@input-color:                    @gray-darker;
+@input-border:                   @yellow; 
+@input-border-radius:            @border-radius-small;
 @input-border-focus:             saturate(@shadow-color, 20%);
 
 @input-color-placeholder:        @gray-light;
@@ -252,7 +251,7 @@
 // Number of columns in the grid system
 @grid-columns:              12;
 // Padding, to be divided by two and applied to the left and right of all columns
-@grid-gutter-width:         1px;
+@grid-gutter-width:         10px;
 
 // Navbar collapse
 
@@ -537,13 +536,13 @@
 
 
 // Thumbnails
-@thumbnail-padding:           4px;
-@thumbnail-bg:                @body-bg;
-@thumbnail-border:            #ddd;
+@thumbnail-padding:           0;
+@thumbnail-bg:                @white;
+@thumbnail-border:            0px solid;
 @thumbnail-border-radius:     @border-radius-base;
 
 @thumbnail-caption-color:     @text-color;
-@thumbnail-caption-padding:   9px;
+@thumbnail-caption-padding:   15px;
 
 
 // Wells

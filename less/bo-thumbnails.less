@@ -1,0 +1,63 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  .img-thumbnail();
+  display: block; // Override the inline-block from `.img-thumbnail`
+  margin-bottom: @line-height-computed;
+
+  > img {
+    .img-responsive();
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Add a hover state for linked versions only
+  a&:hover,
+  a&:focus,
+  a&.active {
+    border-color: @link-color;
+  }
+
+  // Image captions
+  .caption {
+    padding: @thumbnail-caption-padding;
+    color: @thumbnail-caption-color;
+  }
+}
+
+.thumbnail{
+  background: @white;
+
+    a{
+      color:#514C5A; /* @gray-darker */
+    }
+    
+    img{
+      width: 100%;
+    }
+}
+
+.thumbnail:hover{
+  background: #CDCFCF; /* @gray-lighter */
+}
+
+.thumbnail-img{
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.fecha{
+  font-family: "Maven Pro"
+}
+
+.caption h3{
+  text-transform: none;
+}
+
+.caption p{
+  font-size: 0.7em;
+}

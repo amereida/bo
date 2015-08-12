@@ -1,0 +1,84 @@
+
+
+h1,h2,h3{
+	text-transform: uppercase;
+}
+
+h2{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #000;
+	letter-spacing: 5px;
+	margin-bottom: 100px;
+}
+
+h3{
+	font-weight: 100;
+	color:#b0821c;
+}
+
+p{
+	line-height: 2em;
+}
+
+/* NAVBAR */
+
+.navbar-brand img{
+	max-width: 120px;
+}
+
+.navbar-toggle{
+	float:right;
+	margin-top: 50px;
+}
+
+.dropdown-toggle{
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+/* FOOTER */
+
+.footer-container ul{
+	padding: 0;
+	list-style: none;
+}
+
+.footer-container li{
+	color: #CDCFCF; /* @brand-primery */
+	padding-top: 15px;
+	font-family: "Maven Pro";
+	font-weight: 100;
+}
+
+.footer-container a li:hover{
+	color: #FFF;
+}
+
+/* JUMBO FOTO */
+
+.jumbo-foto{
+	position: relative;
+	max-height: 500px;
+	overflow: hidden;
+}
+
+h1{
+	height: 60px;
+	background: rgba(0,0,0,0.85);
+	font-weight: 100;
+	color: #fff;
+	text-transform: uppercase;
+	width: 100%;
+	padding-top: 17px;
+	padding-left: 30px;
+	letter-spacing: 7px;
+	margin-top: 100px;
+	margin-bottom: 0;
+}
+
+.jumbo-foto h1{
+	position: absolute;
+	bottom: 0;
+}
+
+
