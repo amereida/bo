@@ -16,42 +16,47 @@
 </head>
 <body <?php body_class(); ?>>
 	<div id='wrapper' class='hfeed'>
-		<nav class="navbar navbar-default" role='navigation'>
-			<div class='container container-fluid'>
-				<section class='navbar-header' id='branding'>
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#walker">
-						<span class="sr-only">control del menu</span>
-						<!--<span class='icn icn-menu'></span>-->
-						<?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca-iso.png" />'; ?>
-					</button>
-					<!--
-					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'bo' ); ?>" rel='home'>
-						<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
-					</a>
-					-->
-				</section>
-				<div id='walker' class='collapse navbar-collapse'>
-					<nav id='menu' role='navigation'>
-						<?php wp_nav_menu( array(
-							'menu'              => 'primary',
-							'theme_location'    => 'main-menu',
-							'depth'             => 2,
-							'container'         => 'div',
-							'container_class'   => '',
-							'container_id'      => 'bs-example-navbar-collapse-1',
-							'menu_class'        => 'nav navbar-nav',
-							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-							'walker'            => new wp_bootstrap_navwalker())
-						);
-						?>
-						<form action="<?php echo home_url( '/' ); ?>" method="get" class="navbar-form navbar-right" role="search">
-							<div class="form-group form-search">
-								<input type="text" name="s" class="form-control" placeholder="Buscar..." id="search" value="<?php the_search_query(); ?>" />
-							</div>
-						</form>
-					</nav>
-				</div>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar navbar-inverse" role='navigation'>
+	<div class='container'>
+	
+	<!-- Botón menú dropdown -->
+	<section class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#walker">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- logo -->
+      <a class="navbar-brand" href="index.html"><?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca.png" />'; ?></a>
+    </section>
+	<!-- Menú administrable desde wordpress -->
+			<div id='walker' class='collapse navbar-collapse'>
+				<nav id='menu' role='navigation'>
+					<?php wp_nav_menu( array(
+						'menu'              => 'primary',
+						'theme_location'    => 'main-menu',
+						'depth'             => 2,
+						'container'         => 'div',
+						'container_class'   => '',
+						'container_id'      => 'bs-example-navbar-collapse-1',
+						'menu_class'        => 'nav navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'walker'            => new wp_bootstrap_navwalker())
+					);
+					?>
+					<form action="<?php echo home_url( '/' ); ?>" method="get" class="navbar-form navbar-right" role="search">
+						<div class="form-group form-search">
+							<input type="text" name="s" class="form-control" placeholder="Buscar..." id="search" value="<?php the_search_query(); ?>" />
+						</div>
+					</form>
+				</nav>
 			</div>
-		</nav>
+		</div>
+</nav>
+</header>
 		
 		<div id='container' class='container'>
