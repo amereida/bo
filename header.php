@@ -19,19 +19,17 @@
 
 <!-- NAVBAR -->
 <header>
-<nav class="navbar navbar-inverse" role='navigation'>
+<nav class="navbar navbar-default" role='navigation'>
 	<div class='container'>
 	
 	<!-- Botón menú dropdown -->
 	<section class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#walker">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icn icn-menu"></span>
       </button>
       <!-- logo -->
-      <a class="navbar-brand" href="index.html"><?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca.png" />'; ?></a>
+      <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca1.png" />'; ?></a>
     </section>
 	<!-- Menú administrable desde wordpress -->
 			<div id='walker' class='collapse navbar-collapse'>

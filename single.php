@@ -5,6 +5,19 @@
 	
 	<div class="row">
 		<div class="col-sm-12">
+
+			<div class="jumbo-foto">
+				<h1><?php echo get_the_title(); ?></h1>
+
+
+				<?php	if ( has_post_thumbnail() ) {
+				echo the_post_thumbnail();
+				}
+				else {
+				echo '<img class="full-width" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
+				}
+				?>
+			</div>
 		<!--<?php
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail('large');
@@ -12,11 +25,11 @@
 			else {
 				echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
 			}
-		?>-->
+		?>
 		<h1 class='post-title'><?php echo get_the_title(); ?></h1>
 				<span class='post-date'><?php the_time('F j, Y'); ?></span> 
-				<!-- <?php get_template_part( 'entry', 'meta' ); ?> -->
-		</div>
+				<!-- <?php get_template_part( 'entry', 'meta' ); ?> 
+		</div> -->
 		
 	</div>
 	<?php echo edit_post_link( "lapiz" ); ?> 
