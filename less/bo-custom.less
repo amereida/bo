@@ -60,112 +60,6 @@ a:hover{text-decoration: none}
 }
 
 
-
-// Contenido de páginas y posts
-
-.page-title{
-	font-family: @font-family-sans-serif;
-	font-size: 2.5em;
-	line-height: 5em;
-	font-weight: 100;
-	text-transform: uppercase;
-	margin: 0;
-	position: relative;
-	z-index: @zindex-dropdown - 100;
-	color: darken(@body-bg, 10);
-	//.longShadow(@white, -1, 100);
-	text-shadow: -2px -2px 1px #FFF;
-	text-align: center;
-}
-
-.post-title{
-	font-size: 2.5em;
-	font-family: @font-family-serif;
-	.hyphens(auto);
-	font-weight: 100;
-	color: @brand-primary;
-	letter-spacing: -.021ex;
-	margin: 2ex 0 0 0;
-}
-
-.post-date{
-	font-weight: lighter;
-	font-style: italic;
-	font-size: 1.3em;
-	line-height: 3em;
-}
-
-
-.category-title,
-.tag-title{
-	font-weight: 300;
-	font-size: 2.1em;
-}
-
-.page-entry-title{
-	font-weight: lighter;
-	margin: 2ex 0px 2.5ex 0;
-	text-transform: uppercase;
-	color: fade(@gray-dark, 30);
-	letter-spacing: .2ex;
-	word-spacing: .5ex;
-	font-size: 1em;
-}
-
-.entry-content{
-	.wp-caption{
-		&:first-child{
-			margin-top: -(@well-padding + 1);
-			img{margin-top: 0;}
-		}
-	}
-}
-
-
-
-.entry-content{
-	font-weight: 300;
-	line-height: 1.6;
-	text-align: justify;
-	text-justify: distribute;
-	word-spacing: normal;
-	.hyphens(auto);
-	-moz-text-align-last: left; /* Code for Firefox */
-    text-align-last: left;
-    > p{
-    	line-height: @line-height-computed * 1.5;
-    	margin-top: @line-height-computed * 1.5;
-    	text-align: justify;
-    	text-indent: 3em;
-    	&:first-child{
-    		text-indent: 0;
-	    	&:first-of-type:first-letter{
-	    		display: inline-block;
-				font-family: @font-family-serif;
-				float: left;
-				font-weight: 900;
-				margin: 12px 10px 0 0px;
-				font-size: 3.6em !important;
-				line-height: .75em;
-				color: @gray-dark; 
-	    	}
-	    }
-	}
-
-	strong{
-		color: @black;
-	}
-
-	h3, h5{
-		color: @brand-primary;
-	}
-	h1, h2, h3, h4, h5, h6{
-		margin-top: 2em;
-	}
-}
-
-
-
 #container{
 	background-color: @container-gray;
 }
@@ -332,6 +226,7 @@ input[type='submit']{
 }
 
 
+
 .flip{
 	display: inline-block;
 	.scaleX(-1);
@@ -348,7 +243,7 @@ strong{
 	margin-top: 80px;
 }
 
-header{
+.header{
 	margin-bottom: 90px;
 }
 
@@ -363,6 +258,10 @@ header .container{
 	li{
 		padding-bottom: 10px;
 	}
+}
+
+.white{
+	background-color: @white;
 }
 
 // Responsive 

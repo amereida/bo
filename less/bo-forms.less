@@ -130,7 +130,7 @@ output {
   vertical-align: middle;
   background-color: @input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 2px solid @input-border;
+  border: 1px solid @input-border;
   border-radius: @input-border-radius;
   .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
@@ -384,4 +384,29 @@ input[type="checkbox"],
   }
 
 
+}
+
+.wpcf7{
+
+  input,select,textarea{
+    border: 1px solid @gray-light;
+    border-radius: @border-radius-small;
+  }
+
+  input:focus,select:focus,textarea:focus{
+    border: 1px solid @yellow;
+    -webkit-box-shadow: 0px 0px 5px 0px @yellow;
+    -moz-box-shadow: 0px 0px 5px 0px @yellow;
+    box-shadow: 0px 0px 5px 0px @yellow;
+  }
+
+}
+
+.wpcf7-submit{
+  -moz-text-align-last: center;
+  text-align: center;
+}
+
+.div.wpcf7-validation-errors{
+  border: 2px solid @yellow!important;
 }

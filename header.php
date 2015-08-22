@@ -18,7 +18,7 @@
 	<div id='wrapper' class='hfeed'>
 
 <!-- NAVBAR -->
-<header>
+<header class="header">
 <nav class="navbar navbar-default" role='navigation'>
 	<div class='container'>
 	
@@ -56,5 +56,3 @@
 		</div>
 </nav>
 </header>
-		
-		<div id='container' class='container'>

@@ -87,7 +87,15 @@
 	</div>
 	<?php endwhile; endif; ?>
 <footer class="footer">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div class="well">
+			<?php related_posts(); ?>
+		</div>
+	</div>
+
+	<!--
 	<?php get_template_part( 'nav', 'below-single' ); ?>
+	-->
 </footer>
 </section>
 <?php get_footer(); ?>
