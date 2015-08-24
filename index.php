@@ -4,7 +4,7 @@
 
 	<div class="col-sm-8 col-sm-offset-2 white">
 		
-		<section id="content" role="main" class='well'>
+		<section id="content" role="main" class='well entry-content'>
 			
 
 			<?php 
