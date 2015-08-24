@@ -35,7 +35,8 @@
 					'post_type'	    => 'page',
 					'category_name'	=> 'agoras',
 					'orderby'		=> 'name',
-					'order'         => 'asc'
+					'order'         => 'asc',
+					'posts_per_page'=> '-1'
 				));
 				foreach($agoras as $link){
 					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
@@ -49,7 +50,8 @@
 					'post_type'	    => 'page',
 					'category_name'	=> 'esculturas',
 					'orderby'		=> 'name',
-					'order'         => 'asc'
+					'order'         => 'asc',
+					'posts_per_page'=> '-1'
 				));
 				foreach($esculturas as $link){
 					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
@@ -63,7 +65,8 @@
 					'post_type'	    => 'page',
 					'category_name'	=> 'obras-publicas',
 					'orderby'		=> 'name',
-					'order'         => 'asc'
+					'order'         => 'asc',
+					'posts_per_page'=> '-1'
 				));
 				foreach($obraspublicas as $link){
 					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
@@ -77,7 +80,8 @@
 					'post_type'	    => 'page',
 					'category_name'	=> 'hospederias',
 					'orderby'		=> 'name',
-					'order'         => 'asc'
+					'order'         => 'asc',
+					'posts_per_page'=> '-1'
 				));
 				foreach($hospederias as $link){
 					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
@@ -91,9 +95,10 @@
 					'post_type'	    => 'page',
 					'category_name'	=> 'salas-y-talleres',
 					'orderby'		=> 'name',
-					'order'         => 'asc'
+					'order'         => 'asc',
+					'posts_per_page'=> '-1'
 				));
-				foreach($publicas as $link){
+				foreach($salas as $link){
 					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
 				}
 			?></ul>
