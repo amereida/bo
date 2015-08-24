@@ -42,7 +42,7 @@
 			-->
 		</header>
 		<section id="content" role="main" class='well'>
-			<div class="entry-content">
+			<div class="page-content">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<section class="entry-content">

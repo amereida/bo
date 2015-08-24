@@ -4,7 +4,7 @@
 
 	<div class="col-sm-8 col-sm-offset-2 white">
 		
-		<section id="content" role="main" class='well'>
+		<section id="content" role="main" class='well entry-content'>
 			
 
 			<?php 
@@ -14,10 +14,13 @@
 				echo apply_filters('the_content', $page_data->post_content);
 			?>
 
+		<!-- SECCIÓN DE CONTACTO/DIRECCIÓN -->
+			
+
+				
+		<!-- LLAMAR ÚLTIMOS POST -->
 
 			<h2>Acontecer</h2>
-
-			<!-- LLAMAR ÚLTIMOS POST -->
 
 			<?php
 			 $postslist = get_posts('numberposts=4&order=DESC&orderby=date');
