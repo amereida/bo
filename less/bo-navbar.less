@@ -2,7 +2,7 @@
 .navbar{
 	font-family: @font-family-sans-serif;
 	font-weight: 800;
-	margin-bottom: @shadow-length-px * 3;
+	margin-bottom: 0;
 	.navbar-nav > .open > a{
 	}
 	.clearfix();
@@ -62,3 +62,32 @@
 	font-weight: 100;
 	text-transform: uppercase;
 }
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+	.container > .navbar-collapse, .container > .navbar-header {
+	    margin-right: 16px;
+	    margin-left: 16px;
+	}
+}
+
+// Phones and Tablets
+@media(max-width: @screen-sm-max){
+
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+
