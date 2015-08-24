@@ -29,7 +29,7 @@
         <span class="icn icn-menu"></span>
       </button>
       <!-- logo -->
-      <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca1.png" />'; ?></a>
+      <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca.png" />'; ?></a>
     </section>
 	<!-- Menú administrable desde wordpress -->
 			<div id='walker' class='collapse navbar-collapse'>
