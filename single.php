@@ -3,21 +3,7 @@
 <section id="content" role="main">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
-	<div class="row">
-		<div class="col-sm-12">
-
-			<div class="jumbo-foto">
-				<h1><?php echo get_the_title(); ?></h1>
-
-
-				<?php	if ( has_post_thumbnail() ) {
-				echo the_post_thumbnail();
-				}
-				else {
-				echo '<img class="full-width" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
-				}
-				?>
-			</div>
+			
 		<!--<?php
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail('large');
@@ -31,7 +17,7 @@
 				<!-- <?php get_template_part( 'entry', 'meta' ); ?> 
 		</div> -->
 		
-	</div>
+
 	<?php echo edit_post_link( "lapiz" ); ?> 
 	<div class="row">
 		<!--
@@ -56,6 +42,20 @@
 		</div>
 		-->
 		<div class="col-sm-8 col-sm-offset-2">
+
+			<div class="jumbo-foto">
+				<h1><?php echo get_the_title(); ?></h1>
+
+
+				<?php	if ( has_post_thumbnail() ) {
+				echo the_post_thumbnail();
+				}
+				else {
+				echo '<img class="full-width" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
+				}
+				?>
+			</div>
+
 			<div class="well">
 
 				<article class="entry-content">
@@ -79,23 +79,28 @@
 						}
 					?>
 				</div>
+
 			</div>
-			<div class="aftershadow">
-				<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-			</div>
+
 		</div>
+
 	</div>
+
+	</section>
+	
 	<?php endwhile; endif; ?>
-<footer class="footer">
+
 	<div class="col-sm-8 col-sm-offset-2">
 		<div class="well">
 			<?php related_posts(); ?>
 		</div>
 	</div>
 
-	<!--
+
+
+<!--
+<footer class="footer">
 	<?php get_template_part( 'nav', 'below-single' ); ?>
-	-->
 </footer>
-</section>
+-->
 <?php get_footer(); ?>

@@ -15,14 +15,14 @@
 			?>
 
 			<h2>Acontecer</h2>
-<ul>
+
 <?php
 	$recent_posts = wp_get_recent_posts();
 	foreach( $recent_posts as $recent ){
-		echo '<div class="thumbnail"><a href="' . get_permalink($recent["ID"]) . '">' . $recent["post_thumbnail"].  $recent["post_title"].'</a> </div> ';
+		echo '<div class="col-md-6"><div class="thumbnail"> <a href="' . get_permalink($recent["ID"]) . '"> <div class="thumbnail-img">' . $recent["post_thumbnail"] . '</div> <h3>' . $recent["post_title"].' </h3> </div></a></div> ';
 	}
 ?>
-</ul>
+
 
 		</section>
 
