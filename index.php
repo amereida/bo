@@ -14,17 +14,40 @@
 				echo apply_filters('the_content', $page_data->post_content);
 			?>
 
+
 			<h2>Acontecer</h2>
 
-<?php
-	$recent_posts = wp_get_recent_posts();
-	foreach( $recent_posts as $recent ){
-		echo '<div class="col-md-6"><div class="thumbnail"> <a href="' . get_permalink($recent["ID"]) . '"> <div class="thumbnail-img">' . $recent["post_thumbnail"] . '</div> <h3>' . $recent["post_title"].' </h3> </div></a></div> ';
-	}
-?>
+			<!-- LLAMAR ÚLTIMOS POST -->
+
+			<?php
+			 $postslist = get_posts('numberposts=3&order=DESC&orderby=date');
+			 foreach ($postslist as $post) :
+			    setup_postdata($post);
+			 ?>
+			 <div class="col-md-6">
+			 <div class="thumbnail">
+			 	<a href="<?php the_permalink(); ?>">
+			 	<div class="thumbnail-img">
+			 		<?php	if ( has_post_thumbnail() ) {
+					the_post_thumbnail();
+					}
+					else{
+						echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
+					}
+				?>
+			 	</div>
+			 <div class="caption">
+				 <h3><?php the_title(); ?></h3>
+				 <div class="fecha"><?php the_time(get_option('date_format')) ?></div>
+				 <p><?php the_excerpt(); ?></p>
+			 </div>
+				</a>
+			 </div>
+			 </div>
+			 <?php endforeach; ?>
 
 
-		</section>
+</section>
 
 
 		<!-- ESTO ES LO QUE HIZO EL HERBERT
