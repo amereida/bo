@@ -14,10 +14,13 @@
 				echo apply_filters('the_content', $page_data->post_content);
 			?>
 
+		<!-- SECCIÓN DE CONTACTO/DIRECCIÓN -->
+			
+
+				
+		<!-- LLAMAR ÚLTIMOS POST -->
 
 			<h2>Acontecer</h2>
-
-			<!-- LLAMAR ÚLTIMOS POST -->
 
 			<?php
 			 $postslist = get_posts('numberposts=4&order=DESC&orderby=date');
