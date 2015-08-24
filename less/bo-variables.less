@@ -162,7 +162,7 @@
 @input-bg-disabled:              @body-bg;
 
 @input-color:                    @gray-darker;
-@input-border:                   @gray-light; 
+@input-border:                   fade(@gray-light, 50); 
 @input-border-radius:            @border-radius-small;
 @input-border-focus:             @yellow;
 
@@ -275,7 +275,7 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
 @navbar-default-color:             #777;
-@navbar-default-bg:                @body-bg;
+@navbar-default-bg:                transparent; //@body-bg;
 @navbar-default-border:            transparent; 
 
 // Navbar links
