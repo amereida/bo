@@ -27,25 +27,49 @@
 				<article class="entry-content">
 					<?php echo the_content(); ?>
 				</article>
+			
+			<div class="row">
+			<h2>Interiores</h2>
 
-				<h3>Ágoras</h3>
-
-			<ul><?php
-				$agoras = get_posts(array(
+			<?php
+				$interiores = get_posts(array(
 					'post_type'	    => 'page',
-					'category_name'	=> 'agoras',
+					'category_name'	=> 'interiores',
 					'orderby'		=> 'name',
 					'order'         => 'asc',
 					'posts_per_page'=> '-1'
 				));
-				foreach($agoras as $link){
-					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
+				foreach($interiores as $link){
+
+					echo '<a href="'.get_page_link($link->ID).'"><div class="col-md-4 img-obra">'.get_the_post_thumbnail($link->ID).'<div class="overtitle"><h3>'.get_the_title($link->ID).'</h3></div></div></a>';
 				}
-			?></ul>
+			?>
+			</div>
 
-			<h3>Esculturas</h3>
+			<div class="row">
 
-			<ul><?php
+			<h2>Exteriores</h2>
+
+			<?php
+				$exteriores = get_posts(array(
+					'post_type'	    => 'page',
+					'category_name'	=> 'exteriores',
+					'orderby'		=> 'name',
+					'order'         => 'asc',
+					'posts_per_page'=> '-1'
+				));
+				foreach($exteriores as $link){
+					echo '<a href="'.get_page_link($link->ID).'"><div class="col-md-4 img-obra">'.get_the_post_thumbnail($link->ID).'<div class="overtitle"><h3>'.get_the_title($link->ID).'</h3></div></div></a>';
+				}
+			?>
+
+			</div>
+
+			<div class="row">
+
+			<h2>Esculturas</h2>
+
+			<?php
 				$esculturas = get_posts(array(
 					'post_type'	    => 'page',
 					'category_name'	=> 'esculturas',
@@ -54,55 +78,13 @@
 					'posts_per_page'=> '-1'
 				));
 				foreach($esculturas as $link){
-					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
+					echo '<a href="'.get_page_link($link->ID).'"><div class="col-md-4 img-obra">'.get_the_post_thumbnail($link->ID).'<div class="overtitle"><h3>'.get_the_title($link->ID).'</h3></div></div></a>';
 				}
-			?></ul>
+			?>
 
-			<h3>Obras Públicas</h3>
+			</div>
 
-			<ul><?php
-				$obraspublicas = get_posts(array(
-					'post_type'	    => 'page',
-					'category_name'	=> 'obras-publicas',
-					'orderby'		=> 'name',
-					'order'         => 'asc',
-					'posts_per_page'=> '-1'
-				));
-				foreach($obraspublicas as $link){
-					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
-				}
-			?></ul>
-
-			<h3>Hospederías y Vestales</h3>
-
-			<ul><?php
-				$hospederias = get_posts(array(
-					'post_type'	    => 'page',
-					'category_name'	=> 'hospederias',
-					'orderby'		=> 'name',
-					'order'         => 'asc',
-					'posts_per_page'=> '-1'
-				));
-				foreach($hospederias as $link){
-					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
-				}
-			?></ul>
-
-			<h3>Salas y Talleres</h3>
-
-			<ul><?php
-				$salas = get_posts(array(
-					'post_type'	    => 'page',
-					'category_name'	=> 'salas-y-talleres',
-					'orderby'		=> 'name',
-					'order'         => 'asc',
-					'posts_per_page'=> '-1'
-				));
-				foreach($salas as $link){
-					echo '<li><a href="'.get_page_link($link->ID).'">'.$link->post_title.'</a></li>';
-				}
-			?></ul>
-				
+			
 				<!-- GeoMashup -->
 				<div id="geomashup">
                 	<?php echo GeoMashup::map('width=100%'); ?>
