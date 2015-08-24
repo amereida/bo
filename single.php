@@ -87,7 +87,7 @@
 	</div>
 
 	</section>
-	
+
 	<?php endwhile; endif; ?>
 
 	<div class="col-sm-8 col-sm-offset-2">
@@ -103,4 +103,5 @@
 	<?php get_template_part( 'nav', 'below-single' ); ?>
 </footer>
 -->
+
 <?php get_footer(); ?>

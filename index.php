@@ -20,7 +20,7 @@
 			<!-- LLAMAR ÚLTIMOS POST -->
 
 			<?php
-			 $postslist = get_posts('numberposts=3&order=DESC&orderby=date');
+			 $postslist = get_posts('numberposts=4&order=DESC&orderby=date');
 			 foreach ($postslist as $post) :
 			    setup_postdata($post);
 			 ?>
@@ -39,7 +39,10 @@
 			 <div class="caption">
 				 <h3><?php the_title(); ?></h3>
 				 <div class="fecha"><?php the_time(get_option('date_format')) ?></div>
-				 <p><?php the_excerpt(); ?></p>
+				 <p><?php
+					  $excerpt = get_the_excerpt();
+					  echo string_limit_words($excerpt,35);
+					?> ... <span class="vermas">[seguir leyendo]</span></p>
 			 </div>
 				</a>
 			 </div>
@@ -47,7 +50,7 @@
 			 <?php endforeach; ?>
 
 
-</section>
+		</section>
 
 
 		<!-- ESTO ES LO QUE HIZO EL HERBERT

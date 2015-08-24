@@ -9,8 +9,8 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
 
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/favicon.ico' ?>" />
-	<link rel="icon" type="image/png" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/favicon.png' ?>" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/favicon1.ico' ?>" />
+	<link rel="icon" type="image/png" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/favicon1.png' ?>" />
 
 	<?php wp_head(); ?>
 </head>
