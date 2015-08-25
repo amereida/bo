@@ -23,6 +23,14 @@
 		</div>
 	</div>
 	-->
+
+	<!--BREADCUMBS -->
+	<div class="col-sm-8 col-sm-offset-2">
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+		} ?>
+	</div>
+
 	<div class="col-sm-8 col-sm-offset-2 white">
 		<header>
 			<?php	if ( has_post_thumbnail() ) {
