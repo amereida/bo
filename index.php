@@ -10,7 +10,7 @@
 			<?php 
 				$page_id = 83;
 				$page_data = get_page( $page_id );
-				echo '<h1>'. $page_data->post_title .'</h1>';
+				echo '<h1 class="anti-well-title">'. $page_data->post_title .'</h1>';
 				echo apply_filters('the_content', $page_data->post_content);
 			?>
 
