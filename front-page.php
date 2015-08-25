@@ -22,6 +22,8 @@
 
 			<h2>Acontecer</h2>
 
+			<div class="row">
+
 			<?php
 			 $postslist = get_posts('numberposts=4&order=DESC&orderby=date');
 			 foreach ($postslist as $post) :
@@ -52,28 +54,15 @@
 			 </div>
 			 <?php endforeach; ?>
 
+			</div>
+
+			 <div class="row">
+			 	<a class="btn btn-primary btn-lg" href="<?php echo get_permalink( get_page_by_title( 'Acontecer' ) ); ?>" role="button">ver más</a>
+			 </div>
+
 
 		</section>
 
-
-		<!-- ESTO ES LO QUE HIZO EL HERBERT
-		<div class="col-sm-6 hidden-xs">
-			<?php dynamic_sidebar( 'wide' ); ?>
-			<?php dynamic_sidebar( 'clean' ); ?>
-			<?php get_sidebar(); ?>
-		</div>
-
-
-		<div class="col-sm-6">
-			<section id="content" role="main" class='row'>
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-				get_template_part( 'entry-small' );
-				comments_template();
-				endwhile; endif; ?>
-				<?php get_template_part( 'nav', 'below' ); ?>
-			</section>
-		</div>
-		-->
 	</div>
 </div>
 
