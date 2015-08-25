@@ -1,42 +1,47 @@
 <?php get_header(); ?>
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <section id="content" role="main">
 	
-	<?php echo edit_post_link( "lapiz" ); ?> 
-	<div class="row">
+<?php echo edit_post_link( "lapiz" ); ?>
 
-		<!--BREADCUMBS -->
-		<div class="col-sm-8 col-sm-offset-2">
-			<?php if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-			} ?>
-		</div>
+<div class="row">
 
-		<div class="col-sm-8 col-sm-offset-2">
+	<!--BREADCUMBS -->
 
+	<div class="col-sm-8 col-sm-offset-2">
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+		} ?>
+	</div>
 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<!-- LÍMITE DEL CONTENIDO -->
 
+	<div class="col-sm-8 col-sm-offset-2">
+
+	<!-- IMAGEN DESTACADA + TÍTULO DE LA PÁGINA -->
+
+		<header>
 			<?php	if ( has_post_thumbnail() ) {
 			echo '<div class="jumbo-foto">'.'<h1>'.get_the_title().'</h1>'.get_the_post_thumbnail().'</div>';
 			 }
-
 			 else{
 			 	echo '<h1>'.get_the_title().'</h1>';
 			 }
 			?>
+		</header>
+
+	<!-- CONTENIDO DE LA PÁGINA -->
 	
-			<div class="row">
-
-				
-			</div>
-			<div class="well">
-
+		<div class="well">
+			<div class="page-content">
 				<article class="entry-content">
 					<?php echo the_content(); ?>
 				</article>
+			</div>
 			
-			<div class="row">
+			<div class="row"> <!-- OBRAS INTERIORES -->
 			<h2>Interiores</h2>
 
 			<?php
@@ -52,9 +57,9 @@
 					echo '<a href="'.get_page_link($link->ID).'"><div class="col-md-4 img-obra">'.get_the_post_thumbnail($link->ID).'<div class="overtitle"><h3>'.get_the_title($link->ID).'</h3></div></div></a>';
 				}
 			?>
-			</div>
+			</div> <!-- OBRAS INTERIORES -->
 
-			<div class="row">
+			<div class="row"> <!-- OBRAS EXTERIORES -->
 
 			<h2>Exteriores</h2>
 
@@ -71,9 +76,9 @@
 				}
 			?>
 
-			</div>
+			</div> <!-- OBRAS EXTERIORES -->
 
-			<div class="row">
+			<div class="row"> <!-- ESCULTURAS -->
 
 			<h2>Esculturas</h2>
 
@@ -90,21 +95,21 @@
 				}
 			?>
 
-			</div>
+			</div> <!-- ESCULTURAS -->
 
 			
-				<!-- GeoMashup -->
-				<div id="geomashup">
-                	<?php echo GeoMashup::map('width=100%'); ?>
-       			</div>
-			</div>
+			<!-- GeoMashup -->
+			<div id="geomashup">
+               	<?php echo GeoMashup::map('width=100%'); ?>
+       		</div>
+
 		</div>
+	</div> <!-- COLUMNAS -->
+</div> <!-- ROW -->
 
-	</div> 
-	<div class="row">
 
 
-	<?php endwhile; endif; ?>
+<?php endwhile; endif; ?>
 
 </section>
 <?php get_footer(); ?>

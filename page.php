@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<?php edit_post_link("lapiz"); ?>
+<section id="content" role="main">
+
+<?php echo edit_post_link("lapiz"); ?>
 
 <div class="row">
 
@@ -32,9 +35,8 @@
 
 	<!-- CONTENIDO DE LA PÁGINA -->
 
-		<section id="content" role="main" class='well'>
+		<div class="well">
 			<div class="page-content">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<section class="entry-content">
 						<?php the_content(); ?>
@@ -42,14 +44,12 @@
 					</section>
 				</article>
 			</div>
-		</section>
-		
-		
-		
-
-	</div> <!-- LÍMITE DEL CONTENIDO -->
+		</div>
+	</div>
 
 </div> <!-- ROW -->
+
+</section>
 
 <?php endwhile; endif; ?>
 
