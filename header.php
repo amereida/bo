@@ -29,28 +29,31 @@
         <span class="icn icn-menu"></span>
       </button>
       <!-- logo -->
-      <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca.png" />'; ?></a>
+      <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><?php echo '<img class="iso" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/cca-iso.png" />'; ?></a>
     </section>
 	<!-- Menú administrable desde wordpress -->
 			<div id='walker' class='collapse navbar-collapse'>
 				<nav id='menu' role='navigation'>
+
+					<form action="<?php echo home_url( '/' ); ?>" method="get" class="navbar-form navbar-right" role="search">
+						<div class="form-group form-search">
+							<input type="text" name="s" class="form-control" placeholder="Buscar..." id="search" value="<?php the_search_query(); ?>" />
+						</div>
+					</form>
+
 					<?php wp_nav_menu( array(
 						'menu'              => 'primary',
 						'theme_location'    => 'main-menu',
 						'depth'             => 2,
 						'container'         => 'div',
 						'container_class'   => '',
-						'container_id'      => 'bs-example-navbar-collapse-1',
+						'container_id'      => 'menu-colapsable',
 						'menu_class'        => 'nav navbar-nav',
 						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 						'walker'            => new wp_bootstrap_navwalker())
 					);
 					?>
-					<form action="<?php echo home_url( '/' ); ?>" method="get" class="navbar-form navbar-right" role="search">
-						<div class="form-group form-search">
-							<input type="text" name="s" class="form-control" placeholder="Buscar..." id="search" value="<?php the_search_query(); ?>" />
-						</div>
-					</form>
+					
 				</nav>
 			</div>
 		</div>
