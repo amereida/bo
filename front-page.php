@@ -1,3 +1,9 @@
+<?php
+/*
+Template name: Front Page
+*/
+?>
+
 <?php get_header(); ?>
 
 <div class="row">

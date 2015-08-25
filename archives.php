@@ -15,8 +15,10 @@ Template name: Archives Page
 			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 		} ?>
 	</div>
-	
+
 <div class="col-sm-8 col-sm-offset-2 white">
+
+<h1><?php the_title(); ?></h1>
 
 <?php
 			 $postslist = get_posts('numberposts=-1&order=DESC&orderby=date');
