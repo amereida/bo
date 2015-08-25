@@ -1,15 +1,21 @@
 <?php get_header(); ?>
 <div class="row">
-	<div class="col-sm-6">
-		<?php get_sidebar(); ?>
+	<div class="col-sm-8 col-sm-offset-2">
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+		} ?>
 	</div>
-	<div class="col-sm-6">
-		<div class="well">
-			<section id="content" role="main">
-				<?php if ( have_posts() ) : ?>
-				<header class="header">
+
+	<!-- LÍMITE DEL CONTENIDO -->
+
+	<div class="col-sm-8 col-sm-offset-2">
+		<?php if ( have_posts() ) : ?>
+				<header>
 					<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'bo' ), get_search_query() ); ?></h1>
 				</header>
+		<div class="well">
+		<section id="content" role="main">
+				
 				<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'entry' ); ?>
 			<?php endwhile; ?>
@@ -25,7 +31,7 @@
 					</section>
 				</article>
 			<?php endif; ?>
-			</section>
+		</section>
 		</div>
 	</div>
 </div>
