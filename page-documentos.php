@@ -3,10 +3,10 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <section id="content" role="main">
-	
-<?php echo edit_post_link( "lapiz" ); ?>
 
 <div class="row">
+
+	<?php echo edit_post_link("lapiz"); ?>
 
 	<!--BREADCUMBS -->
 
@@ -42,7 +42,7 @@
 			</div>
 			
 			<div class="row"> 
-			<h2>Interiores</h2>
+			<h2>Documentos</h2>
 
 			<?php
 				$documentos = get_posts(array(

@@ -55,44 +55,28 @@
 
     .fecha{
       position: absolute;
-      top: 133px;
-      right: 5px;
-      font-family: "Maven Pro";
-      font-weight: bold;
-      color: @gray-dark;
-      background-color: fade(@white, 75);
+      top: 171px;
+      right: 0;
+      font-family: @font-family-sans-serif;
+      padding: .1ex 1ex;
+      font-size: .8em;
+      letter-spacing: .2ex;
+      font-weight: lighter;
+      text-transform: uppercase;
+      color: @gray-lighter;
+      background-color: fade(@black, 75);
       font-size: 1em;
       text-align: center;
-      width: 48px;
-      height: 48px;
-      margin: 5px 1ex 0 0;
-      -moz-text-align-last: center;
-      text-align-last: center;
-      border-radius: 3px;
-      box-shadow: 0 0 3px fade(@black, 70);
-      border: 1px solid @yellow;
       z-index: 100;
-
-      .mes{
-        background-color: @yellow;
-        color: @white;
-        font-size: 12px;
-        text-transform: uppercase;
-      }
-
+      .mes{color: @yellow}
     }
 }
-
-
-
-
-
 
 .caption h3{
   text-transform: uppercase;
   margin-top: 0;
   padding-bottom: 1em;
-  height: 2.5em;
+  min-height: 2.5em;
   text-align: left;
   letter-spacing: .3ex;
 }

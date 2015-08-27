@@ -6,9 +6,18 @@
 	<?php endwhile; endif; ?>
 </header>
 
-<?php edit_post_link("lapiz"); ?>
+
 
 <div class="row">
+	<?php echo edit_post_link("lapiz"); ?>
+
+	<!--BREADCUMBS -->
+
+	<div class="col-sm-8 col-sm-offset-2">
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+		} ?>
+	</div>
 	
 	<div class="col-lg-10 col-md-10 col-lg-offset-2 col-md-offset-2">
 		<section id="content" role="main" class='well'>

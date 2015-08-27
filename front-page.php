@@ -49,7 +49,7 @@ Template name: Front Page
 			 	</div>
 			 <div class="caption">
 				 <h3><?php the_title(); ?></h3>
-				 <div class="fecha"><div class='mes'><?php the_time('M')?></div><?php the_time('j')?></div>
+				 <div class="fecha"><?php the_time('j')?> <span class='mes'><?php the_time('M'); ?></span></div>
 				 <p><?php
 					  $excerpt = get_the_excerpt();
 					  echo string_limit_words($excerpt,35);

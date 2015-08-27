@@ -2,13 +2,13 @@
 
 #footer{
 	
-	font-size: 1em;
+	font-size: .75em;
 	a{
 		color: fade(@black, 60) !important;
 	}
 
 	background: @blackboard;
-	padding: 3em 0;
+	padding: 4em 0;
 	margin-top: 50px;
 
 	.container{
@@ -23,20 +23,23 @@
 	h1,h2,h3,h4,h5,h6,p{
 		color:@gray-lighter;
 	}
+
+	ul{
+		padding: 0;
+		list-style: none;
+
+		li{
+			color: fade(@gray-lighter, 65);
+			font-family: @font-family-sans-serif;
+			font-weight: 100;
+			&:hover{
+				color: @white;
+			}
+		}
+	}
 }
 
-.footer-container ul{
-	padding: 0;
-	list-style: none;
-}
 
-.footer-container li{
-	color: @gray-lighter;
-	padding-top: 15px;
-	font-family: @font-family-sans-serif;
-	font-weight: 100;
-}
 
-.footer-container a li:hover{
-	color: @white;
-}
+
+

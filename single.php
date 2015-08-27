@@ -4,10 +4,10 @@
 
 <section id="content" role="main">
 
-<?php echo edit_post_link( "lapiz" ); ?>
+
 
 <div class="row">
-
+	<?php echo edit_post_link( "lapiz" ); ?>
 	<!--BREADCUMBS -->
 
 	<div class="col-sm-8 col-sm-offset-2">
