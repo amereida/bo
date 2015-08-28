@@ -24,11 +24,11 @@
 
 		<header>
 			<?php	if ( has_post_thumbnail() ) {
-			echo get_the_post_thumbnail().'<h1>'.get_the_title().'</h1>';
+			echo get_the_post_thumbnail().'<h1 class="entry-title">'.get_the_title().'</h1>';
 			 }
 
 			 else{
-			 	echo '<h1>'.get_the_title().'</h1>';
+			 	echo '<h1 class="entry-title">'.get_the_title().'</h1>';
 			 }
 			?>
 		</header>
