@@ -47,7 +47,7 @@ a:hover{text-decoration: none}
 	color: fade(@link-color, 40);
 	text-align: center;
 	font-size: 18px;
-	line-height: 42;
+	line-height: 42px;
 	.size(42px, 42px);
 	&:hover{
 		background-color: @brand-primary;
@@ -174,13 +174,43 @@ input[type='submit']{
 	}
 }
 
+#ficha,
 .ficha{
 	background-color: @sand; 
 	color: #000000; 
-	border: 1px solid #DDD; 
-	padding: 20px; 
+	padding: 2em 8%; 
 	font-size: 13px; 
-	width: 100%;
+}
+
+// para documentos
+#ficha{
+	margin: 2em -8%;
+	width: 116%;
+	li{
+		list-style-type: none;
+		padding: .5ex 0;
+		strong{
+			display: inline-block;
+			width: 100px;
+		}
+	}
+	a{
+		text-transform: uppercase;
+		font-family: @font-family-sans-serif;
+		display: inline-block;
+		background-color: @yellow;
+		color: @white;
+		padding: .1ex 1ex;
+		border-radius: 2px;
+		&:hover{
+			background-color: darken(@yellow, 10%)
+		}
+	}
+}
+
+// para obras
+.ficha{
+
 }
 
 // Commments

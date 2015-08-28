@@ -9,7 +9,7 @@ Template name: Front Page
 <div class="container">
 <div class="row">
 
-	<div class="col-sm-8 col-sm-offset-2 white">
+	<div class="col-sm-12 white">
 		
 		<section id="content" role="main" class='well entry-content'>
 			
@@ -41,7 +41,7 @@ Template name: Front Page
 			 	<a href="<?php the_permalink(); ?>">
 			 	<div class="thumbnail-img">
 			 		<?php	if ( has_post_thumbnail() ) {
-					the_post_thumbnail();
+					the_post_thumbnail('thumbnail');
 					}
 					else{
 						echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';

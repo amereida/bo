@@ -3,7 +3,7 @@
 h1,h2,h3,h4{
 	text-transform: uppercase;
 	margin-bottom: 0;
-	padding-bottom: 30px;
+	padding-bottom: 1em;
 
 }
 
@@ -22,17 +22,18 @@ h1{
 }
 
 h2{
-	padding-bottom: 20px;
-	border-bottom: 1px solid @black;
-	letter-spacing: 5px;
-	margin-bottom: 50px;
+
+	font-weight: bold;
+	margin: 4em 0 0 0;
+	// border-bottom: 1px solid @black;
+	letter-spacing: .45ex;
 	text-align: left!important;
 	.hyphens(none)!important;
 }
 
 h3{
-	font-weight: 100;
-	letter-spacing: 5px;
+	margin: 3em 0 0 0;
+	letter-spacing: .45ex;
 	color: @yellow;
 }
 
@@ -141,4 +142,11 @@ p{
 	padding-top: 17px;
 	padding-left: 30px;
 	letter-spacing: 7px;
+}
+
+#breadcrumbs{
+	text-transform: uppercase;
+	font-family: "Maven Pro";
+	letter-spacing: .2ex;
+	font-size: .8em;
 }
