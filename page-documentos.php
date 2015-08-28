@@ -2,65 +2,78 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<section id="content" role="main">
-<div class="container">
-<div class="row">
+	<section id="content" role="main">
+		<div class="container">
+			<div class="row">
 
-	<?php echo edit_post_link("lapiz"); ?>
+				<?php echo edit_post_link("lapiz"); ?>
 
-	<!--BREADCUMBS -->
+				<!--BREADCUMBS -->
 
-	<div class="col-sm-12 col-lg-10 col-lg-offset-1">
-		<?php if ( function_exists('yoast_breadcrumb') ) {
-			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-		} ?>
-	</div>
+				<div class="col-md-10 col-md-offset-1">
+					<?php if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+					} ?>
+				</div>
 
-	<!-- LÍMITE DEL CONTENIDO -->
+				<!-- LÍMITE DEL CONTENIDO -->
 
-	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
+				<div class="col-md-10 col-md-offset-1">
 
-	<!-- IMAGEN DESTACADA + TÍTULO DE LA PÁGINA -->
+					<!-- IMAGEN DESTACADA + TÍTULO DE LA PÁGINA -->
 
-		<header>
-			<?php	if ( has_post_thumbnail() ) {
-			echo '<div class="jumbo-foto">'.'<h1>'.get_the_title().'</h1>'.get_the_post_thumbnail().'</div>';
-			 }
-			 else{
-			 	echo '<h1>'.get_the_title().'</h1>';
-			 }
-			?>
-		</header>
+					<header>
+						<?php	if ( has_post_thumbnail() ) {
+							echo '<div class="jumbo-foto">'.'<h1>'.get_the_title().'</h1>'.get_the_post_thumbnail().'</div>';
+						}
+						else{
+							echo '<h1>'.get_the_title().'</h1>';
+						}
+						?>
+					</header>
 
-	<!-- CONTENIDO DE LA PÁGINA -->
-	
-		<div class="well">
-			<div class="page-content">
-				<article class="entry-content">
-					<?php echo the_content(); ?>
-				</article>
-			</div>
-			
-			<div class="row"> 
-			<h2>Documentos</h2>
+					<!-- CONTENIDO DE LA PÁGINA -->
 
-			<?php
-				$documentos = get_posts(array(
-					'post_type'	    => 'page',
-					'category_name'	=> 'documentos',
-					'orderby'		=> 'name',
-					'order'         => 'asc',
-					'posts_per_page'=> '-1'
-				));
-				foreach($documentos as $link){
+					<div class="well">
+						<div class="page-content">
+							<article class="entry-content">
+								<?php echo the_content(); ?>
+							</article>
+						</div>
 
-					echo '<a href="'.get_page_link($link->ID).'"><div class="col-md-4 docs">'.get_the_post_thumbnail($link->ID).'<div class="overtitle"><h3>'.get_the_title($link->ID).'</h3></div></div></a>';
-				}
-			?>
-			</div>
+						<div class="row"> 
 
-		</div>
-	</div> <!-- COLUMNAS -->
+							<?php
+							$documentos = get_posts(array(
+								'post_type'	    => 'page',
+								'category_name'	=> 'documentos',
+								'orderby'		=> 'name',
+								'order'         => 'asc',
+								'posts_per_page'=> '-1'
+								));
+							foreach($documentos as $doc){
+
+								echo '<a href="'.get_page_link($doc->ID).'" class="doc" ><h3>'.get_the_title($doc->ID).'</h3></a>'.get_the_author($doc->ID);
+							}
+							?>
+
+							<?php
+							$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+
+							echo '<ul>';
+							foreach ( $mypages as $page ) {
+								  	$option = '<li><a href=' . get_page_link( $page->ID ) . '">';
+									$option .= $page->post_title;
+									$option .= '</a></li>';
+									echo $option;
+								  }
+							echo '</ul>';
+							?>
+
+</div>
+
+</div>
+</div> <!-- COLUMNAS -->
 </div> <!-- ROW -->
 </div>
 
