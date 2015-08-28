@@ -11,15 +11,31 @@ Template name: Front Page
 
 	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
 		
-		<section id="content" role="main" class='well entry-content'>
+		
 			
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<?php 
+			<?php echo edit_post_link( "lapiz" ); ?>
+
+		<section id="content" role="main" class='well entry-content'>
+
+					<div class="page-content">
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<section class="entry-content">
+								<?php the_content(); ?>
+								<div class="entry-links"><?php wp_link_pages(); ?></div>
+							</section>
+						</article>
+					</div>
+
+			<?php endwhile; endif; ?>
+
+		<!--	<?php 
 				$page_id = 83;
 				$page_data = get_page( $page_id );
 				#echo '<h1 class=" ">'. $page_data->post_title .'</h1>';
 				echo apply_filters('the_content', $page_data->post_content);
-			?>
+			?> -->
 
 		<!-- SECCIÓN DE CONTACTO/DIRECCIÓN -->
 			
