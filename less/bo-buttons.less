@@ -9,6 +9,7 @@
 // Core styles
 .btn {
   display: inline-block;
+
   margin-bottom: 0; // For input.btn
   font-weight: @btn-font-weight;
   text-align: center;
@@ -121,19 +122,23 @@
   }
 }
 
+// Button center
+
+  .btn-center{
+    display: block;
+    margin: 0 auto;
+    -moz-text-align-last: center;
+    -webkit-text-align-last: center;
+    -o-text-align-last: center;
+  }
+
 
 // Button Sizes
 // --------------------------------------------------
 
 .btn-lg {
-  margin: 70px 0;
   // line-height: ensure even-numbered height of button next to large input
   .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-small);
-  display: block;
-  margin: 0 auto;
-  -webkit-text-align-last: center;
-  -moz-text-align-last: center;
-  -o-text-align-last: center;
 }
 .btn-sm,
 .btn-xs {
