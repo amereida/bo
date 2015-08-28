@@ -32,11 +32,11 @@ Template name: Front Page
 			<div class="row">
 
 			<?php
-			 $postslist = get_posts('numberposts=4&order=DESC&orderby=date');
+			 $postslist = get_posts('numberposts=6&order=DESC&orderby=date');
 			 foreach ($postslist as $post) :
 			    setup_postdata($post);
 			 ?>
-			 <div class="col-md-6">
+			 <div class="col-lg-4 col-md-6 col-sm-12">
 			 <div class="thumbnail">
 			 	<a href="<?php the_permalink(); ?>">
 			 	<div class="thumbnail-img">
