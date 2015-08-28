@@ -11,7 +11,7 @@
 	<div class="col-sm-8 col-sm-offset-2">
 		<?php if ( have_posts() ) : ?>
 				<header>
-					<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'bo' ), get_search_query() ); ?></h1>
+					<h1 class="entry-title"><?php printf( __( 'Resultados de búsqueda: %s', 'bo' ), get_search_query() ); ?></h1>
 				</header>
 		<div class="well">
 		<section id="content" role="main">
