@@ -9,7 +9,6 @@
 // Core styles
 .btn {
   display: inline-block;
-
   margin-bottom: 0; // For input.btn
   font-weight: @btn-font-weight;
   text-align: center;
@@ -20,7 +19,7 @@
   white-space: nowrap;
   .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-small);
   .user-select(none);
-
+  transition: all ease .5s;
   &:focus {
     .tab-focus();
   }

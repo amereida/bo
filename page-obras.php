@@ -54,7 +54,7 @@
 				));
 				foreach($interiores as $link){
 
-					echo '<a href="'.get_page_link($link->ID).'"><div class="col-md-4 img-obra">'.get_the_post_thumbnail($link->ID).'<div class="overtitle"><h3>'.get_the_title($link->ID).'</h3></div></div></a>';
+					echo '<a href="'.get_page_link($link->ID).'"><div class="col-md-4 img-obra">'.get_the_post_thumbnail($link->ID, large).'<div class="overtitle"><h3>'.get_the_title($link->ID).'</h3></div></div></a>';
 				}
 			?>
 			</div> <!-- OBRAS INTERIORES -->
