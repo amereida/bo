@@ -5,12 +5,12 @@
 <section id="content" role="main">
 
 
-
+<div class="container">
 <div class="row">
 	<?php echo edit_post_link( "lapiz" ); ?>
 	<!--BREADCUMBS -->
 
-	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
+	<div class="col-sm-12 col-lg-10 col-lg-offset-1">
 		<?php if ( function_exists('yoast_breadcrumb') ) {
 			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 		} ?>
@@ -69,14 +69,14 @@
 
 	<!-- POST RELACIONADOS -->
 
-	<div class="col-sm-8 col-sm-offset-2">
+	<div class="col-sm-12 col-lg-10 col-lg-offset-1">
 		<div class="well">
 			<?php related_posts(); ?>
 		</div>
 	</div>
 
 </div> <!-- ROW -->
-
+</div>
 </section>
 
 <?php endwhile; endif; ?>	
