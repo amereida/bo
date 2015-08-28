@@ -78,7 +78,7 @@ Template name: Front Page
 			</div>
 
 			 <div class="row">
-			 	<a class="btn btn-primary btn-lg" href="<?php
+			 	<a class="btn btn-primary" href="<?php
 				    // Get the ID of a given category
 				    $category_id = get_cat_ID( 'Noticias' );
 
