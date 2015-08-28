@@ -34,9 +34,11 @@ h1{
 
 h2{
 	padding-bottom: 20px;
-	border-bottom: 1px solid @gray-lighter;
+	border-bottom: 1px solid @black;
 	letter-spacing: 5px;
 	margin-bottom: 50px;
+	text-align: left!important;
+	.hyphens(none)!important;
 }
 
 h3{
@@ -102,6 +104,7 @@ p{
 
 .entry-content{
 	.wp-caption{
+		font-size: 13px;
 		&:first-child{
 			margin-top: -(@well-padding + 1);
 			img{margin-top: 0;}
@@ -124,7 +127,8 @@ p{
     	line-height: @line-height-computed * 1.5;
     	margin-top: @line-height-computed * 1.5;
     	text-align: justify;
-		.hyphens(auto);
+
+
 	    }
 	}
 
@@ -148,11 +152,4 @@ p{
 	padding-top: 17px;
 	padding-left: 30px;
 	letter-spacing: 7px;
-}
-
-#breadcrumbs{
-	text-transform: uppercase;
-	font-family: "Maven Pro";
-	letter-spacing: .2ex;
-	font-size: .8em;
 }
