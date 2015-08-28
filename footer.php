@@ -1,4 +1,4 @@
-
+</div><!-- cierra contenedor abierto en header.php-->
 
 	<footer id="footer" role="contentinfo">
 		

@@ -72,6 +72,7 @@ Template name: Front Page
 	</div>
 </div>
 
+
 <?php get_footer(); ?>
 
 
