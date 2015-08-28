@@ -10,7 +10,7 @@
 	
 	<!--BREADCUMBS -->
 
-	<div class="col-sm-8 col-sm-offset-2">
+	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
 		<?php if ( function_exists('yoast_breadcrumb') ) {
 			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 		} ?>
@@ -18,7 +18,7 @@
 
 	<!-- LÍMITE DEL CONTENIDO -->
 
-	<div class="col-sm-8 col-sm-offset-2">
+	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
 
 	<!-- IMAGEN DESTACADA + TÍTULO DE LA PÁGINA -->
 

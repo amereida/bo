@@ -9,7 +9,7 @@ Template name: Front Page
 <div class="container">
 <div class="row">
 
-	<div class="col-sm-8 col-sm-offset-2 white">
+	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
 		
 		<section id="content" role="main" class='well entry-content'>
 			
