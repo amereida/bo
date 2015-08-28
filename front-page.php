@@ -9,17 +9,31 @@ Template name: Front Page
 <div class="container">
 <div class="row">
 
-	<div class="col-sm-12 white">
-		
-		<section id="content" role="main" class='well entry-content'>
+	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
 			
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<?php 
+			<?php echo edit_post_link( "lapiz" ); ?>
+
+		<section id="content" role="main" class='well entry-content'>
+
+					<div class="page-content">
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<section class="entry-content">
+								<?php the_content(); ?>
+								<div class="entry-links"><?php wp_link_pages(); ?></div>
+							</section>
+						</article>
+					</div>
+
+			<?php endwhile; endif; ?>
+
+		<!--	<?php 
 				$page_id = 83;
 				$page_data = get_page( $page_id );
 				#echo '<h1 class=" ">'. $page_data->post_title .'</h1>';
 				echo apply_filters('the_content', $page_data->post_content);
-			?>
+			?> -->
 
 		<!-- SECCIÓN DE CONTACTO/DIRECCIÓN -->
 			
@@ -54,7 +68,7 @@ Template name: Front Page
 				 <p><?php
 					  $excerpt = get_the_excerpt();
 					  echo string_limit_words($excerpt,35);
-					?> ... <span class="vermas">[seguir leyendo]</span></p>
+					?> &hellip; <span class="vermas">[seguir leyendo]</span></p>
 			 </div>
 				</a>
 			 </div>
@@ -64,7 +78,12 @@ Template name: Front Page
 			</div>
 
 			 <div class="row">
-			 	<a class="btn btn-primary btn-lg" href="<?php echo get_permalink( get_page_by_title( 'Acontecer' ) ); ?>" role="button">ver más</a>
+			 	<a class="btn btn-primary btn-lg" href="<?php
+				    // Get the ID of a given category
+				    $category_id = get_cat_ID( 'Noticias' );
+
+				    // Get the URL of this category
+				    $category_link = get_category_link( $category_id );?> <?php echo esc_url( $category_link ); ?>" role="button">ver más</a>
 			 </div>
 
 
