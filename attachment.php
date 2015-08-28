@@ -42,8 +42,8 @@
 					<a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php echo esc_html( get_the_title( $post->ID ), 1 ); ?>" rel="attachment"><?php echo basename( $post->guid ); ?></a>
 				<?php endif; ?>
 
-				<div class="entry-caption">
-					<?php if ( !empty( $post->post_excerpt ) ) the_excerpt(); ?>
+				<div class="entry-caption wp-caption">
+					<p class="wp-caption-text"><?php echo get_the_excerpt(); ?></p>
 				</div>
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 			</div>
