@@ -64,7 +64,13 @@ Template name: Front Page
 			</div>
 
 			 <div class="row">
-			 	<a class="btn btn-primary btn-lg" href="<?php echo get_permalink( get_page_by_title( 'Acontecer' ) ); ?>" role="button">ver más</a>
+			 	<a class="btn btn-primary btn-lg" href="<?php
+													    // Get the ID of a given category
+													    $category_id = get_cat_ID( 'Noticias' );
+
+													    // Get the URL of this category
+													    $category_link = get_category_link( $category_id );
+													?> <?php echo esc_url( $category_link ); ?>" role="button">ver más</a>
 			 </div>
 
 
