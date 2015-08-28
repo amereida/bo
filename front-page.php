@@ -28,14 +28,16 @@ Template name: Front Page
 
 			<?php endwhile; endif; ?>
 
-		<!--	<?php 
-				$page_id = 83;
-				$page_data = get_page( $page_id );
-				#echo '<h1 class=" ">'. $page_data->post_title .'</h1>';
-				echo apply_filters('the_content', $page_data->post_content);
-			?> -->
 
 		<!-- SECCIÓN DE CONTACTO/DIRECCIÓN -->
+
+		<div class="direccion">
+				<p><span class="icn icn-mapa"></span> Km. 4 Camino Concon - Quintero</p>
+				<p><span class="icn icn-mapa"></span> Matta 12, Recreo, Viña del Mar</p>
+				<p>Valparaíso, Chile</p>
+				<p>+56 32 666 510</p>
+				<a class="btn btn-primary btn-center" href="<?php echo get_permalink( get_page_by_path( 'Contacto' ) ) ?>" role="button">Escríbenos</a>
+		</div>
 			
 
 				
@@ -78,7 +80,7 @@ Template name: Front Page
 			</div>
 
 			 <div class="row">
-			 	<a class="btn btn-primary" href="<?php
+			 	<a class="btn btn-primary btn-center" href="<?php
 				    // Get the ID of a given category
 				    $category_id = get_cat_ID( 'Noticias' );
 
