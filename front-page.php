@@ -6,6 +6,7 @@ Template name: Front Page
 
 <?php get_header(); ?>
 
+<div class="container">
 <div class="row">
 
 	<div class="col-sm-8 col-sm-offset-2 white">
@@ -71,7 +72,7 @@ Template name: Front Page
 
 	</div>
 </div>
-
+</div><!--contenedor-->
 
 <?php get_footer(); ?>
 
