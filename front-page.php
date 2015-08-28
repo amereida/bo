@@ -9,7 +9,7 @@ Template name: Front Page
 <div class="container">
 <div class="row">
 
-	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
+	<div class="col-md-10 col-md-offset-1">
 			
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

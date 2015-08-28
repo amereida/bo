@@ -10,7 +10,7 @@
 	<?php echo edit_post_link( "lapiz" ); ?>
 	<!--BREADCUMBS -->
 
-	<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+	<div class="col-md-10 col-md-offset-1">
 		<?php if ( function_exists('yoast_breadcrumb') ) {
 			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 		} ?>
@@ -18,7 +18,7 @@
 
 	<!-- LÍMITE DEL CONTENIDO -->
 
-	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">
+	<div class="col-md-10 col-md-offset-1">
 
 	<!-- IMAGEN DESTACADA + TÍTULO DE LA PÁGINA -->
 
