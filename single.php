@@ -22,9 +22,7 @@
 
 	<!-- IMAGEN DESTACADA + TÍTULO DE LA PÁGINA -->
 
-	<header class="jumbo-foto">
-		<h1><?php echo get_the_title(); ?></h1>
-
+	<header>
 		<?php	if ( has_post_thumbnail() ) {
 			echo the_post_thumbnail();
 			}
@@ -32,6 +30,7 @@
 			echo '<img class="full-width" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
 			}
 		?>
+		<h1><?php echo get_the_title(); ?></h1>
 	</header>
 
 	<!-- CONTENIDO DE LA PÁGINA -->

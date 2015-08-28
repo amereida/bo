@@ -24,7 +24,7 @@
 
 		<header>
 			<?php	if ( has_post_thumbnail() ) {
-			echo '<div class="jumbo-foto">'.'<h1>'.get_the_title().'</h1>'.get_the_post_thumbnail().'</div>';
+			echo get_the_post_thumbnail().'<h1>'.get_the_title().'</h1>';
 			 }
 
 			 else{
