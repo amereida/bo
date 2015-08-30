@@ -1,80 +1,84 @@
 <?php get_header(); ?>
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <section id="content" role="main">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	
-	<div class="row">
-		<div class="col-sm-12">
-		<!--<?php
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail('large');
+
+
+<div class="container">
+<div class="row">
+	<?php echo edit_post_link( "lapiz" ); ?>
+	<!--BREADCUMBS -->
+
+	<div class="col-md-10 col-md-offset-1">
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+		} ?>
+	</div>
+
+	<!-- LÍMITE DEL CONTENIDO -->
+
+	<div class="col-md-10 col-md-offset-1">
+
+	<!-- IMAGEN DESTACADA + TÍTULO DE LA PÁGINA -->
+
+	<header>
+		<?php	if ( has_post_thumbnail() ) {
+			echo the_post_thumbnail();
 			}
 			else {
-				echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
+			echo '<img class="full-width" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
 			}
-		?>-->
-		<h1 class='post-title'><?php echo get_the_title(); ?></h1>
-				<span class='post-date'><?php the_time('F j, Y'); ?></span> 
-				<!-- <?php get_template_part( 'entry', 'meta' ); ?> -->
-		</div>
-		
-	</div>
-	<?php echo edit_post_link( "lapiz" ); ?> 
-	<div class="row">
-		<!--
-		<div class="col-sm-6">
-			<div class="well">
-					<div class="anti-well-with-text">
-						<?php
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail('large');
-							}
-							else {
-								echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
-							}
-						?>
-					</div>
-				<h1 class='huge'><?php echo get_the_title(); ?></h1>
-				<?php get_template_part( 'entry', 'meta' ); ?> 
-			</div>
-			<div class='row hidden-xs'>
-				<?php dynamic_sidebar( 'for singles' ); ?>
-			</div>
-		</div>
-		-->
-		<div class="col-sm-8 col-sm-offset-2">
-			<div class="well">
+		?>
+		<h1 class="entry-title"><?php echo get_the_title(); ?></h1>
+	</header>
 
-				<article class="entry-content">
-					<?php echo the_content(); ?>
-				</article>
-				
-				<!-- GeoMashup -->
-				<div id="geomashup">
-                	<?php echo GeoMashup::map('width=100%'); ?>
-       			</div>
+	<!-- CONTENIDO DE LA PÁGINA -->
 
-				<div class="labels pull-right">Archivado en: 
-					<?php
-						$posttags = get_the_tags();
-						if ($posttags) {
-							foreach($posttags as $tag) {
-								echo "<a class='label' href=\"";
-								echo get_tag_link($tag->term_id);
-								echo "\">".$tag->name."</a>";
-							}
-						}
-					?>
+		<div class="well">
+
+			<article class="entry-content">
+				<div class="fecha">
+					<?php the_time(get_option('date_format')) ?>
 				</div>
+				<?php echo the_content(); ?>
+			</article>
+				
+			<!-- GeoMashup -->
+			<div id="geomashup">
+               	<?php echo GeoMashup::map('width=100%'); ?>
+       		</div>
+
+       		<!-- ARCHIVADO EN (MUESTRA ETIQUETAS DEL POST) -->
+
+			<div class="labels pull-right">Archivado en: 
+				<?php
+					$posttags = get_the_tags();
+					if ($posttags) {
+						foreach($posttags as $tag) {
+							echo "<a class='label' href=\"";
+							echo get_tag_link($tag->term_id);
+							echo "\">".$tag->name."</a>";
+						}
+					}
+				?>
 			</div>
-			<div class="aftershadow">
-				<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-			</div>
+
+		</div> <!-- WELL -->
+	</div> <!-- COLUMNAS -->
+
+	<!-- POST RELACIONADOS -->
+
+	<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+		<div class="well">
+			<?php related_posts(); ?>
 		</div>
 	</div>
-	<?php endwhile; endif; ?>
-<footer class="footer">
-	<?php get_template_part( 'nav', 'below-single' ); ?>
-</footer>
+
+</div> <!-- ROW -->
+</div>
 </section>
+
+<?php endwhile; endif; ?>	
+
 <?php get_footer(); ?>

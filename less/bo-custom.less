@@ -7,7 +7,6 @@
 
 
 // Helpers
-
 a:active,
 a:hover{text-decoration: none}
 
@@ -23,57 +22,33 @@ a:hover{text-decoration: none}
 .color{color: @brand-primary}
 .uc{text-transform: uppercase;}
 
+// HEADING FEATURED IMAGE
 
-// Navbar
-.navbar{
-	font-family: @font-family-sans-serif;
-	font-weight: 800;
-	margin-bottom: @shadow-length-px * 3;
-	.navbar-nav > .open > a{
-	}
-	.clearfix();
-	overflow-y: visible;
-}
-
-.navbar-toggle{
-	float: none;
-}
-
-
-.iso{
-	width: 200px;
+.attachment-post-thumbnail{
+	margin: 0;
+	width: 100% !important;
 	height: auto;
 }
 
 
-#nav-below{
-	margin: 1ex 0 0 0;
-	font-family: @font-family-sans-serif;
-	a{
-		color: fade(@gray-dark, 30);
-		.btn-xs;
-		text-transform: uppercase;
-		font-weight: 700;
-	}
-}
+
 
 // Index
 
 .post-edit-link{
 	display: inline-block;
-	position: absolute;
+	position: fixed;
+	right: 6.8%;
 	z-index: 2000;
-	top: 200;
-	right: 15%;
 	font-family: "Stampa";
 	font-weight: 200;
 	background-color: @white;
 	border-radius: 50%;
 	color: fade(@link-color, 40);
 	text-align: center;
-	font-size: 24px;
-	line-height: 63px;
-	.size(64px, 64px);
+	font-size: 18px;
+	line-height: 42px;
+	.size(42px, 42px);
 	&:hover{
 		background-color: @brand-primary;
 		color: @white;
@@ -84,120 +59,9 @@ a:hover{text-decoration: none}
 }
 
 
-
-// Contenido de páginas y posts
-
-.page-title{
-	font-family: @font-family-sans-serif;
-	font-size: 2.5em;
-	line-height: 5em;
-	font-weight: 100;
-	text-transform: uppercase;
-	margin: 0;
-	position: relative;
-	z-index: @zindex-dropdown - 100;
-	color: darken(@body-bg, 10);
-	//.longShadow(@white, -1, 100);
-	text-shadow: -2px -2px 1px #FFF;
-	text-align: center;
+#container{
+	background-color: @container-gray;
 }
-
-.post-title{
-	font-size: 2.5em;
-	font-family: @font-family-serif;
-	.hyphens(auto);
-	font-weight: 100;
-	color: @brand-primary;
-	letter-spacing: -.021ex;
-	margin: 2ex 0 0 0;
-}
-
-.post-date{
-	font-weight: lighter;
-	font-style: italic;
-	font-size: 1.3em;
-	line-height: 3em;
-}
-
-
-.category-title,
-.tag-title{
-	font-weight: 300;
-	font-size: 2.1em;
-}
-
-.page-entry-title{
-	font-weight: lighter;
-	margin: 2ex 0px 2.5ex 0;
-	text-transform: uppercase;
-	color: fade(@gray-dark, 30);
-	letter-spacing: .2ex;
-	word-spacing: .5ex;
-	font-size: 1em;
-}
-
-.entry-content{
-	.wp-caption{
-		&:first-child{
-			margin-top: -(@well-padding + 1);
-			img{margin-top: 0;}
-		}
-	}
-}
-
-
-
-.entry-content{
-	font-weight: 300;
-	line-height: 1.6;
-	text-align: justify;
-	text-justify: distribute;
-	word-spacing: normal;
-	.hyphens(auto);
-	-moz-text-align-last: left; /* Code for Firefox */
-    text-align-last: left;
-    > p{
-    	line-height: @line-height-computed * 1.5;
-    	margin-top: @line-height-computed * 1.5;
-    	text-align: justify;
-    	text-indent: 3em;
-    	&:first-child{
-    		text-indent: 0;
-	    	&:first-of-type:first-letter{
-	    		display: inline-block;
-				font-family: @font-family-serif;
-				float: left;
-				font-weight: 900;
-				margin: 12px 10px 0 0px;
-				font-size: 3.6em !important;
-				line-height: .75em;
-				color: @gray-dark; 
-	    	}
-	    }
-	}
-
-	strong{
-		color: @black;
-	}
-
-	h3, h5{
-		color: @brand-primary;
-	}
-	h1, h2, h3, h4, h5, h6{
-		margin-top: 2em;
-	}
-}
-
-
-#footer{
-	text-align: center;
-	font-size: .8em;
-	padding: 2em 0 3em 0;
-	a{
-		color: fade(@black, 60) !important;
-	}
-}
-
 
 .aftershadow{
 	background-color: fade(@shadow-color, 40);
@@ -271,13 +135,6 @@ p.form-allowed-tags code{
 	white-space: pre-wrap;
 }
 
-// for contact form 7 plugin, leave sizes the same
-.wpcf7-form{
-	.form-group{
-		label{font-size: .6em !important}
-	}
-}
-
 input[type='submit']{
 	.btn;
 	.btn-primary;
@@ -317,14 +174,43 @@ input[type='submit']{
 	}
 }
 
+#ficha,
 .ficha{
 	background-color: @sand; 
 	color: #000000; 
-	border: 1px solid #DDD; 
-	padding: 20px; 
+	padding: 2em 8%; 
 	font-size: 13px; 
-	width: 580px;
-	margin: auto;
+}
+
+// para documentos
+#ficha{
+	margin: 2em -8%;
+	width: 116%;
+	li{
+		list-style-type: none;
+		padding: .5ex 0;
+		strong{
+			display: inline-block;
+			width: 100px;
+		}
+	}
+	a{
+		text-transform: uppercase;
+		font-family: @font-family-sans-serif;
+		display: inline-block;
+		background-color: @yellow;
+		color: @white;
+		padding: .1ex 1ex;
+		border-radius: 2px;
+		&:hover{
+			background-color: darken(@yellow, 10%)
+		}
+	}
+}
+
+// para obras
+.ficha{
+
 }
 
 // Commments
@@ -361,12 +247,121 @@ input[type='submit']{
 }
 
 
+
 .flip{
 	display: inline-block;
 	.scaleX(-1);
 }
 
+.sm{
+	font-size: .85em;
+}
 
+
+strong{
+	color: @black;
+}
+
+.container{
+	margin-top: 80px;
+}
+
+
+
+
+
+header{
+	.container{
+		margin-top: 0;
+	}
+	&.header{
+		h2{
+			text-align: center;
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
+
+.header{
+	margin-bottom: 1em;
+}
+
+#direct ul{
+	list-style: none;
+	padding-left: 0;
+
+	li{
+		padding-bottom: 10px;
+	}
+}
+
+.white{
+	background-color: @white;
+}
+
+.img-obra{
+	height: 160px;
+	display: block;
+	overflow: hidden;
+	img{
+		height: 160px;
+	}
+}
+
+.overtitle{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 1000;
+	text-align: center;
+	vertical-align: middle;
+	background-color: fade(@black, 70%);
+	top: 0;
+
+	h3{
+		color: @white;
+		width: 100%;
+		font-weight: 500;
+		font-size: 15px;
+		letter-spacing: 2px;
+		line-height: 18px;
+		display: block;
+		padding: 0 10px;
+		margin: 0 auto;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&:hover{
+		opacity: 0;
+		-webkit-transition: opacity 0.5s ease-in-out;
+		-moz-transition: opacity 0.5s ease-in-out;
+		-o-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+	}
+}
+
+.direccion{
+	background-image: url(http://www.amereida.cl/wp-content/archivos/2015/08/fondo1.jpg);
+	background-origin: middle;
+	background-position: center;
+	text-align:center;
+	-moz-text-align-last: center;
+	-webkit-text-align-last: center;
+	-o-text-align-last: center;
+	display: block;
+	width: 116%;
+	margin: 20px -8%!important;
+	padding: 5em 0;
+
+	p{
+		color: @white;
+		font-weight: 300;
+		font-style: italic;
+	}
+}
 
 // Responsive 
 // ----------

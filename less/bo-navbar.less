@@ -1,0 +1,92 @@
+// Navbar
+.navbar{
+	font-family: @font-family-sans-serif;
+	font-weight: 800;
+	margin-bottom: 0;
+	.navbar-nav > .open > a{
+	}
+	.clearfix();
+	overflow-y: visible;
+
+	li{
+		letter-spacing: 4px;
+	}
+}
+
+.navbar-toggle{
+	margin-top: 50px;
+	margin-right: 20px;
+	border-radius: 6px;
+	font-size: 32px;
+	color: darken(@body-bg, 10);
+	:hover{
+		background-color: darken(@body-bg, 10);
+		color: @body-bg;
+	}
+}
+
+
+#nav-below{
+	margin: 1ex 0 0 0;
+	font-family: @font-family-sans-serif;
+	a{
+		color: fade(@gray-dark, 30);
+		.btn-xs;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+.dropdown-toggle{
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.icon-bar{
+	color: @yellow!important;
+}
+
+
+.navbar-nav li a{
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+	.container > .navbar-collapse, .container > .navbar-header {
+	    margin-right: 16px;
+	    margin-left: 20px;
+	}
+}
+
+// Phones and Tablets
+@media(max-width: @screen-sm-max){
+
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+	#menu-colapsable{
+		margin-top: 60px;
+		font-size: .8em;
+		#menu-principal{
+			float: right;
+		}
+	}
+	.navbar-form{
+		margin: 0px 18px 38px 0px;
+	}
+}
+

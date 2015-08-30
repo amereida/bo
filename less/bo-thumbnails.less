@@ -1,0 +1,94 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  .img-thumbnail();
+  display: block; // Override the inline-block from `.img-thumbnail`
+  margin-bottom: @line-height-computed;
+
+  > img {
+    .img-responsive();
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Add a hover state for linked versions only
+  a&:hover,
+  a&:focus,
+  a&.active {
+    border-color: @link-color;
+  }
+
+  // Image captions
+  .caption {
+    padding: @thumbnail-caption-padding;
+    color: @thumbnail-caption-color;
+  }
+}
+
+.thumbnail{
+  background: @white;
+
+    a{
+      color:#514C5A; /* @gray-darker */
+    }
+    
+    a:focus{
+      text-decoration: none;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    &:hover{
+      background: @sand;
+    }
+
+    .thumbnail-img{
+      max-height: 200px;
+      overflow: hidden;
+    }
+
+    .fecha{
+      position: absolute;
+      top: 171px;
+      right: 0;
+      font-family: @font-family-sans-serif;
+      padding: .1ex 1ex;
+      font-size: .8em;
+      letter-spacing: .2ex;
+      font-weight: lighter;
+      text-transform: uppercase;
+      color: @gray-lighter;
+      background-color: fade(@black, 75);
+      font-size: 1em;
+      text-align: center;
+      z-index: 100;
+      .mes{color: @yellow}
+    }
+}
+
+.caption{
+  h3{
+      text-transform: uppercase;
+      margin-top: 0;
+      padding-bottom: 1em;
+      min-height: 3.5em;
+      text-align: left;
+      letter-spacing: .22ex;
+      font-size: .9em;
+      }
+  p{
+      font-size: 0.68em;
+      min-height: 175px;
+      }
+}
+
+.vermas{
+  color: @yellow;
+  .hyphens(none);
+}

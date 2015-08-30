@@ -112,6 +112,28 @@ if ( function_exists('register_sidebar') ) {
 		));
 }
 
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'Footer left',
+		'id' => 'footer-left',
+		'before_widget' => '<div id="%1$s" class="col-sm-6 col-md-6 col-lg-6 footer-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		));
+}
+
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'Footer right',
+		'id' => 'footer-right',
+		'before_widget' => '<div id="%1$s" class="col-sm-6 col-md-6 col-lg-6 footer-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		));
+}
+
 function bo_custom_pings( $comment )
 {
 	$GLOBALS['comment'] = $comment;
@@ -179,4 +201,16 @@ return $html;}
 
 add_filter( 'post_thumbnail_html', 'strip_img_dimensions', 10, 3 );
 add_filter( 'post_html', 'strip_img_dimensions', 10, 3 );
+
+
+// LIMITA PALABRAS EXTRACTO DE ENTRADAS
+
+function string_limit_words($string, $word_limit)
+{
+  $words = explode(' ', $string, ($word_limit + 1));
+  if(count($words) > $word_limit)
+  array_pop($words);
+  return implode(' ', $words);
+}
+
 
