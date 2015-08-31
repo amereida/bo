@@ -17,8 +17,4 @@
 <?php get_template_part( 'nav', 'below' ); ?>
 </section>
 
-<div class="hidden-xs">
-	<?php get_sidebar(); ?>
-</div>
-
 <?php get_footer(); ?>
