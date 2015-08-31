@@ -7,9 +7,17 @@
 
 <div class="container">
 <div class="row">
-	<?php echo edit_post_link( "lapiz" ); ?>
-	<!--BREADCUMBS -->
+	
+	<!--EDIT SECTION -->
+	<div class='edit'>
+		<?php echo edit_post_link( "lapiz" ); ?>
+		<?php if ( is_user_logged_in() ) { 
+			echo '<a href="'.get_permalink(get_page_by_title('Ayuda')).'" class="link-ayuda"><span class="icn icn-libro"></span> ayuda</a>';
+		} ?> 
+	</div>
+	
 
+	<!--BREADCUMBS -->
 	<div class="col-md-10 col-md-offset-1">
 		<?php if ( function_exists('yoast_breadcrumb') ) {
 			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
