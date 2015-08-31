@@ -78,8 +78,7 @@
 
 </div> <!-- ROW -->
 </div>
-</section>
-
 <?php endwhile; endif; ?>	
+</section>
 
 <?php get_footer(); ?>
