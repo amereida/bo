@@ -30,6 +30,7 @@
 			echo '<img class="full-width" src="' . get_bloginfo( 'stylesheet_directory' ) . '/img-rotate/rotate.php" />';
 			}
 		?>
+
 		<h1 class="entry-title"><?php echo get_the_title(); ?></h1>
 	</header>
 

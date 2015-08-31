@@ -29,8 +29,8 @@
 	font-size: 13px;
 	font-family: @font-family-sans-serif;
 	display: block;
-	margin: 0 -8% @line-height-computed -8%;
-	width: 116% !important;
+	margin: 0 -9% @line-height-computed -8%;
+	width: 118% !important;
 
 	.wp-caption-text{
 		padding: 0 @well-padding;
@@ -70,7 +70,32 @@ img{
 	}
 }
 
+// Gallery
 
+#gallery-1,
+.gallery{
+	margin: 1em -9.5% 0 -9.5% !important;
+	width: 104% !important;
+	dl.gallery-item{
+		margin: 0;
+		dt.gallery-icon{
+			margin: 0 0px -9px 1px;
+			a{
+				img.attachment-thumbnail{
+					.filter(saturate(0));
+					border-right: 1px solid @white;
+					border-bottom: 1px solid @white;
+
+				}
+				&:hover{
+					img{
+						.filter(saturate(1));
+					}
+				}
+			}
+		}
+	}
+}
 
 // Responsive 
 // ----------

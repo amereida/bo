@@ -150,3 +150,28 @@ p{
 	letter-spacing: .2ex;
 	font-size: .8em;
 }
+
+// Ficha
+
+ul.ficha{
+	background-color: @sand; 
+	color: #000000; 
+	margin: -9.5%;
+	li{
+		position: relative;
+		list-style-type: none;
+		margin: 1ex 0 1ex 10%;
+		strong{
+				display: inline-block;
+				margin: 0 0 0 -10%;
+		}
+	}
+
+}
+
+// Small screen / tablet
+@media (max-width: @screen-sm){
+	ul.ficha{
+	margin: -9%;
+	}
+}
