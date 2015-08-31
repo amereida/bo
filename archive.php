@@ -1,8 +1,5 @@
 <?php get_header(); ?>
 <div class="row">
-	<div class="col-sm-6 hidden-xs">
-		<?php get_sidebar(); ?>
-	</div>
 	<div class="col-sm-6">
 		<section id="content" role="main" class='well'>
 	<!--<header class="header">

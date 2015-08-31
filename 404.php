@@ -7,12 +7,7 @@
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 white">
 				<section class="entry-content">
-					<div class="well">
-						<div style='padding: 3em 0'>
-							<h1 class='tcenter huge'><?php _e( 'el camino no es el camino', 'bo' ); ?></h1>
-						</div>
-						
-					</div>
+					<h1>Error 404: El camino no es el camino</h1>
 				</section>
 				<div class="well">
 					<div class="anti-well">
@@ -23,5 +18,4 @@
 		</div>
 	</article>
 </section>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

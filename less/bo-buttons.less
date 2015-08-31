@@ -28,7 +28,7 @@
   &:focus {
     color: @btn-default-color;
     text-decoration: none;
-    border: 1px solid transparent !important;
+    border: 1px solid @yellow;
   }
 
   &:active,
@@ -65,6 +65,7 @@
   .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
   &:hover{
     background-color: @yellow;
+    border-color: @yellow;
     color: @white;
   }
 }
