@@ -7,9 +7,7 @@
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 white">
 				<section class="entry-content">
-						<div style='padding: 3em 0'>
-							<h1 class='tcenter huge'><?php _e( 'Error 404: El camino no es el camino', 'bo' ); ?></h1>
-						</div>
+					<h1 class='tcenter huge'><?php _e( 'Error 404: El camino no es el camino', 'bo' ); ?></h1>
 				</section>
 				<div class="well">
 					<div class="anti-well">
