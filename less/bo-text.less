@@ -117,22 +117,23 @@ p{
     > p{
     	line-height: @line-height-computed * 1.5;
     	margin-top: @line-height-computed * 1.5;
-    	text-align: justify;
-
-
 	    }
+	ol,
+	ul{
+		line-height: @line-height-computed * 1.5;
 	}
+}
 
-	strong{
-		color: @black;
-	}
+strong{
+	color: @black;
+}
 
-	h3, h5{
-		color: @brand-primary;
-	}
-	h1, h2, h3, h4, h5, h6{
-		margin-top: 2em;
-	}
+h3, h5{
+	color: @brand-primary;
+}
+h1, h2, h3, h4, h5, h6{
+	margin-top: 2em;
+}
 
 
 #breadcrumbs{
@@ -154,6 +155,7 @@ ul.ficha{
 		position: relative;
 		list-style-type: none;
 		margin: 1ex 0 1ex 10%;
+		line-height: 1.5em;
 		strong{
 				display: inline-block;
 				margin: 0 0 0 -10%;
@@ -195,6 +197,33 @@ ul.ficha + p{
 		color: fade(@black, 20);
 	}
 }
+
+
+ul.child-pages{
+	font-size: .7em;
+	li{
+		list-style-type: none;
+		&:before{
+			font-family: "Stampa";
+			content: "parrafo";
+			font-weight: 200;
+			position: relative;
+			left: -1em;
+			color: @yellow
+		}
+		a{
+			font-family: @font-family-sans-serif;
+			letter-spacing: .15ex;
+			font-weight: 800;
+			text-transform: uppercase;
+			color: @gray-dark;
+			&:hover{
+				color: @yellow;
+			}
+		}
+	}
+}
+
 // Small screen / tablet
 @media (max-width: @screen-sm){
 	ul.ficha{

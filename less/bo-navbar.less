@@ -56,11 +56,46 @@
 // ----------
 
 // Extra small screen / phone
-@media(max-width: @screen-xs-max){
-	.container > .navbar-collapse, .container > .navbar-header {
-	    margin-right: 16px;
-	    margin-left: 20px;
+@media(max-width: @screen-sm-max){
+	.container {
+	    margin-top: 0 !important;
 	}
+	.container > .navbar-collapse, .container > .navbar-header {
+		margin: 0 16px 0 20px;
+	    img.iso{
+	    	width: 100px;
+	    	height: auto;
+	    }
+
+	    .navbar-toggle{
+	    	font-size: 18px;
+	    	margin-top: 25px;
+			margin-right: 2px;
+			color: @yellow;
+	    }
+	}
+	.edit{
+		a{
+			border: 1px solid fade(@yellow, 50);
+		}
+	}
+}
+
+
+#nav-below{
+	margin: 0 auto;
+	width: 20%;
+	min-width: 100px;
+	.nav-previous{
+		display: inline-block;
+		float: left;
+	}
+	.nav-next{
+		display: inline-block;
+		float: right;
+	}
+
+	a:hover{color: @black}
 }
 
 // Phones and Tablets

@@ -45,19 +45,18 @@
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<section class="entry-content">
 						<?php the_content(); ?>
+						<?php
+							$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+							if ($children) { ?>
+							<h3>Ver más</h3>
+							<ul class="child-pages">
+							<?php echo $children; ?>
+							</ul>
+						<?php } ?>
 						<div class="entry-links"><?php wp_link_pages(); ?></div>
 					</section>
 				</article>
 			</div>
-
-			<?php
-				$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
-				if ($children) { ?>
-				<h3>Ver más</h3>
-				<ul>
-				<?php echo $children; ?>
-				</ul>
-			<?php } ?>
 		</div>
 	</div>
 

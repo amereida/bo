@@ -14,22 +14,13 @@
 	<section id="content" role="main">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<header>
-			<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link("edit"); ?>
-			<!--<?php get_template_part( 'entry', 'meta' ); ?>-->
+			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			
-			<!--
-			<header class="header">
-				<nav id="nav-above" class="navigation" role="navigation">
-					<div class="nav-previous"><?php previous_image_link( false, '&larr;' ); ?></div>
-					<div class="nav-next"><?php next_image_link( false, '&rarr;' ); ?></div>
-				</nav>
-			</header>
-			-->
+
 		<section class="entry-content">
-			<div class="well">
+			<div class="well-attachment">
 					<?php if ( wp_attachment_is_image( $post->ID ) ) : $att_image = wp_get_attachment_image_src( $post->ID, "large" ); ?>
 
 						<!--<p class="attachment">-->
@@ -47,6 +38,12 @@
 				</div>
 				<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 			</div>
+			
+			<nav id="nav-below" class="navigation" role="navigation">
+				<div class="nav-previous"><?php previous_image_link( false, '&larr;' ); ?></div>
+				<div class="nav-next"><?php next_image_link( false, '&rarr;' ); ?></div>
+			</nav>
+			
 		</section>
 		</article>
 
