@@ -5,10 +5,11 @@
 
 // Mixin and adjust the regular image class
 .thumbnail {
-  .img-thumbnail();
+  background: @white;
+  min-height: 490px;
   display: block; // Override the inline-block from `.img-thumbnail`
   margin-bottom: @line-height-computed;
-
+  .img-thumbnail();
   > img {
     .img-responsive();
     margin-left: auto;
@@ -27,11 +28,6 @@
     padding: @thumbnail-caption-padding;
     color: @thumbnail-caption-color;
   }
-}
-
-.thumbnail{
-  background: @white;
-
     a{
       color:#514C5A; /* @gray-darker */
     }
@@ -67,7 +63,7 @@
       background-color: fade(@black, 75);
       font-size: 1em;
       text-align: center;
-      z-index: 100;
+      z-index: 8;
       .mes{color: @yellow}
     }
 }
@@ -84,11 +80,17 @@
       }
   p{
       font-size: 0.68em;
-      min-height: 175px;
       }
 }
 
 .vermas{
   color: @yellow;
   .hyphens(none);
+}
+
+// Phones and Tablets
+@media(max-width: @screen-sm-max){
+  .thumbnail{
+    min-height: 190px;
+  }
 }

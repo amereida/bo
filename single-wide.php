@@ -20,7 +20,14 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="well">
-				<?php echo edit_post_link( "edit" ); ?> 
+				
+				<!--EDIT SECTION -->
+				<div class='edit'>
+					<?php echo edit_post_link( "lapiz" ); ?>
+					<?php if ( is_user_logged_in() ) { 
+						echo '<a href="'.get_permalink(get_page_by_title('Ayuda')).'" class="link-ayuda"><span class="icn icn-libro"></span> ayuda</a>';
+					} ?> 
+				</div>
 				<div class="entry-content">
 					<?php echo get_the_content(); ?>
 				</div>

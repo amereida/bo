@@ -15,10 +15,5 @@
 <div class="row air">
 	<?php get_template_part( 'nav', 'below' ); ?>
 </div>
-<div class="row">
-	<div class="col-md-12 hidden-xs">
-		<?php get_sidebar(); ?>
-	</div>
-</div>
 
 <?php get_footer(); ?>

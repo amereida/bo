@@ -35,20 +35,43 @@ a:hover{text-decoration: none}
 
 // Index
 
+// Edit Section
+.edit{
+	position: fixed;
+	text-align: center;
+	text-align-last: center;
+	display: inline-block;
+	width: 85px;
+	right: 5%;
+	z-index: 9;
+}
+
+.link-ayuda{
+	font-family: @font-family-sans-serif;
+	background-color: @white;
+	display: inline-block;
+	clear: both;
+	font-size: 16px;
+	padding: .2ex 1ex;
+	margin-top: 1em;
+	border-radius: 4px;
+	&:hover{
+		background-color: @yellow;
+		color: @white;
+	}
+}
+
 .post-edit-link{
 	display: inline-block;
-	position: fixed;
-	right: 6.8%;
 	z-index: 2000;
 	font-family: "Stampa";
 	font-weight: 200;
 	background-color: @white;
 	border-radius: 50%;
-	color: fade(@link-color, 40);
 	text-align: center;
-	font-size: 18px;
-	line-height: 42px;
-	.size(42px, 42px);
+	font-size: 32px;
+	line-height: 64px;
+	.size(64px, 64px);
 	&:hover{
 		background-color: @brand-primary;
 		color: @white;
@@ -279,7 +302,7 @@ header{
 	height: 100%;
 	display: block;
 	position: absolute;
-	z-index: 1000;
+	z-index: 8;
 	text-align: center;
 	vertical-align: middle;
 	background-color: fade(@black, 70%);

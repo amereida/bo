@@ -11,10 +11,16 @@ Template name: Front Page
 
 	<div class="col-md-10 col-md-offset-1">
 			
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		
+		<!--EDIT SECTION -->
+		<div class='edit'>
 			<?php echo edit_post_link( "lapiz" ); ?>
-
+			<?php if ( is_user_logged_in() ) { 
+				echo '<a href="'.get_permalink(get_page_by_title('Ayuda')).'" class="link-ayuda"><span class="icn icn-libro"></span> ayuda</a>';
+			} ?> 
+		</div>
+			
 		<section id="content" role="main" class='well entry-content'>
 
 					<div class="page-content">
@@ -80,14 +86,14 @@ Template name: Front Page
 
 			</div>
 
-			 <div class="row">
+			 <p class="aligncenter">
 			 	<a class="btn btn-primary btn-center" href="<?php
 				    // Get the ID of a given category
 				    $category_id = get_cat_ID( 'Noticias' );
 
 				    // Get the URL of this category
-				    $category_link = get_category_link( $category_id );?> <?php echo esc_url( $category_link ); ?>" role="button">ver más</a>
-			 </div>
+				    $category_link = get_category_link( $category_id );?> <?php echo esc_url( $category_link ); ?>" role="button">leer +</a>
+			 </p>
 
 
 		</section>

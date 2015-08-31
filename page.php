@@ -6,7 +6,13 @@
 <div class="container">
 <div class="row">
 	
-	<?php echo edit_post_link("lapiz"); ?>
+	<!--EDIT SECTION -->
+	<div class='edit'>
+		<?php echo edit_post_link( "lapiz" ); ?>
+		<?php if ( is_user_logged_in() ) { 
+			echo '<a href="'.get_permalink(get_page_by_title('Ayuda')).'" class="link-ayuda"><span class="icn icn-libro"></span> ayuda</a>';
+		} ?> 
+	</div>
 
 	<!--BREADCUMBS -->
 
@@ -43,6 +49,15 @@
 					</section>
 				</article>
 			</div>
+
+			<?php
+				$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+				if ($children) { ?>
+				<h3>Ver más</h3>
+				<ul>
+				<?php echo $children; ?>
+				</ul>
+			<?php } ?>
 		</div>
 	</div>
 
