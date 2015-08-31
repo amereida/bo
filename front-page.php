@@ -11,10 +11,16 @@ Template name: Front Page
 
 	<div class="col-md-10 col-md-offset-1">
 			
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		
+		<!--EDIT SECTION -->
+		<div class='edit'>
 			<?php echo edit_post_link( "lapiz" ); ?>
-
+			<?php if ( is_user_logged_in() ) { 
+				echo '<a href="'.get_permalink(get_page_by_title('Ayuda')).'" class="link-ayuda"><span class="icn icn-libro"></span> ayuda</a>';
+			} ?> 
+		</div>
+			
 		<section id="content" role="main" class='well entry-content'>
 
 					<div class="page-content">

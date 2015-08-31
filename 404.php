@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 <section id="content" role="main">
 	<article id="post-0" class="post not-found">
-		<header class="header">
-			<!-- <h1 class="huge-entry-title"><?php _e( 'Not Found', 'bo' ); ?></h1> -->
-		</header>
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 white">
 				<section class="entry-content">
