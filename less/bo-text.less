@@ -157,6 +157,8 @@ ul.ficha{
 	background-color: @sand; 
 	color: #000000; 
 	margin: -9.5%;
+	font-size: 14px;
+	padding: 3em;
 	li{
 		position: relative;
 		list-style-type: none;
@@ -166,9 +168,40 @@ ul.ficha{
 				margin: 0 0 0 -10%;
 		}
 	}
-
 }
 
+ul.ficha + *{
+	margin-top: 150px;
+}
+
+.docs{
+	margin: 2em 0;
+	padding: 0;
+	
+	
+	.doc-title{
+		display: block;
+		border-radius: 3px;
+		padding: 1ex 1em;
+		font-size: 1.2em;
+		border: 1px solid fade(@yellow, 30);
+		font-family: @font-family-serif;
+		letter-spacing: -.05ex;
+		font-weight: lighter;
+		margin-right: 3ex;
+		&:hover{
+			background-color: @sand;
+		}
+	}
+	.fecha{
+		position: relative;
+		top: -43px;
+		right: 49px;
+		float: right;
+		font-style: italic;
+		color: fade(@black, 20);
+	}
+}
 // Small screen / tablet
 @media (max-width: @screen-sm){
 	ul.ficha{
