@@ -57,9 +57,22 @@
 
 // Extra small screen / phone
 @media(max-width: @screen-xs-max){
+	.container {
+	    margin-top: 0 !important;
+	}
 	.container > .navbar-collapse, .container > .navbar-header {
-	    margin-right: 16px;
-	    margin-left: 20px;
+		margin: 0 16px 0 20px;
+	    img.iso{
+	    	width: 100px;
+	    	height: auto;
+	    }
+
+	    .navbar-toggle{
+	    	font-size: 18px;
+	    	margin-top: 25px;
+			margin-right: 2px;
+			color: @yellow;
+	    }
 	}
 }
 
