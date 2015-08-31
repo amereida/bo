@@ -26,10 +26,6 @@ function bo_setup()
 
 add_action( 'wp_enqueue_scripts', 'bo_load_scripts' );
 
-function bo_load_scripts()
-{
-	wp_enqueue_script( 'jquery' );
-}
 
 add_action( 'comment_form_before', 'bo_enqueue_comment_reply_script' );
 

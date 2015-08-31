@@ -15,7 +15,6 @@
 			yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 		} ?>
 	</div>
-
 	<!-- LÍMITE DEL CONTENIDO -->
 
 	<div class="col-sm-12 col-lg-10 col-lg-offset-1 white">

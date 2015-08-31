@@ -53,33 +53,20 @@
 								));
 							foreach($documentos as $doc){
 
-								echo '<a href="'.get_page_link($doc->ID).'" class="doc" ><h3>'.get_the_title($doc->ID).'</h3></a>'.get_the_author($doc->ID);
+								echo '<div class="docs"><a href="'.get_page_link($doc->ID).'"><span class="doc-title">'.get_the_title($doc->ID).'</span></a>'.'<span class="fecha">'.get_the_date($doc->ID).'</span></div>';
 							}
 							?>
 
-							<?php
-							$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+						</div>
 
-							echo '<ul>';
-							foreach ( $mypages as $page ) {
-								  	$option = '<li><a href=' . get_page_link( $page->ID ) . '">';
-									$option .= $page->post_title;
-									$option .= '</a></li>';
-									echo $option;
-								  }
-							echo '</ul>';
-							?>
-
-</div>
-
-</div>
-</div> <!-- COLUMNAS -->
-</div> <!-- ROW -->
-</div>
+					</div>
+				</div> <!-- COLUMNAS -->
+			</div> <!-- ROW -->
+		</div>
 
 
 
-<?php endwhile; endif; ?>
+	<?php endwhile; endif; ?>
 
 </section>
 <?php get_footer(); ?>

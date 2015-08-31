@@ -75,6 +75,7 @@ Template name: Front Page
 				</a>
 			 </div>
 			 </div>
+			 
 			 <?php endforeach; ?>
 
 			</div>
