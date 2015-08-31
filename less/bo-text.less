@@ -15,7 +15,7 @@ h1{
 	width: 100%;
 	padding-top: 17px;
 	padding-left: 30px;
-	letter-spacing: 7px;
+	letter-spacing: .3ex;
 	margin-bottom: 0;
 	margin-top: 0!important;
 	padding-bottom: 15px;
@@ -60,12 +60,13 @@ p{
 
 .post-title{
 	font-size: 2.5em;
-	font-family: @font-family-serif;
-	.hyphens(auto);
 	font-weight: 100;
 	color: @brand-primary;
 	letter-spacing: -.021ex;
-	margin: 2ex 0 0 0;
+	font-family: @font-family-sans-serif;
+	text-transform: uppercase;
+	padding: 30px;
+
 }
 
 .post-date{
@@ -133,16 +134,6 @@ p{
 		margin-top: 2em;
 	}
 
-
-.post-title{
-	font-family: @font-family-sans-serif;
-	color: @white;
-	text-transform: uppercase;
-	font-weight: 100;
-	padding-top: 17px;
-	padding-left: 30px;
-	letter-spacing: 7px;
-}
 
 #breadcrumbs{
 	text-transform: uppercase;
