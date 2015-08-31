@@ -80,14 +80,14 @@ Template name: Front Page
 
 			</div>
 
-			 <div class="row">
+			 <p class="aligncenter">
 			 	<a class="btn btn-primary btn-center" href="<?php
 				    // Get the ID of a given category
 				    $category_id = get_cat_ID( 'Noticias' );
 
 				    // Get the URL of this category
-				    $category_link = get_category_link( $category_id );?> <?php echo esc_url( $category_link ); ?>" role="button">ver más</a>
-			 </div>
+				    $category_link = get_category_link( $category_id );?> <?php echo esc_url( $category_link ); ?>" role="button">leer +</a>
+			 </p>
 
 
 		</section>
