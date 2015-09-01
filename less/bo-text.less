@@ -232,4 +232,18 @@ ul.child-pages{
 	#breadcrumbs{
 		padding: 0 1em;
 	}
+	.post-title,
+	.page-title,
+	.entry-content{
+		font-size: .8em;
+		line-height: 1.4em;
+		> p{
+    	line-height: @line-height-computed;
+    	margin-top: @line-height-computed;
+	    }
+	ol,
+	ul{
+		line-height: @line-height-computed;
+	}
+	}
 }
