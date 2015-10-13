@@ -24,7 +24,8 @@ function bo_setup()
 	add_post_type_support( 'post', 'post-formats' );
 }
 
-add_action( 'wp_enqueue_scripts', 'bo_load_scripts' );
+// la funcion referenciada no existe, por lo tanto se elimina
+//add_action( 'wp_enqueue_scripts', 'bo_load_scripts' );
 
 
 add_action( 'comment_form_before', 'bo_enqueue_comment_reply_script' );

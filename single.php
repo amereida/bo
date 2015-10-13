@@ -80,7 +80,10 @@
 
 	<div class="col-sm-12 col-lg-10 col-lg-offset-1">
 		<div class="well">
-			<?php related_posts(); ?>
+			<?php 
+				//Esta función no existe
+				//related_posts(); 
+			?>
 		</div>
 	</div>
 
