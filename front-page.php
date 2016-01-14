@@ -36,15 +36,16 @@ Template name: Front Page
 
 
 		<!-- SECCIÓN DE CONTACTO/DIRECCIÓN -->
-
-		<div class="direccion">
-				<p><span class="icn icn-mapa"></span> Km. 4 Camino Concon - Quintero</p>
-				<p><span class="icn icn-mapa"></span> Matta 12, Recreo, Viña del Mar</p>
-				<p>Valparaíso, Chile</p>
-				<p>+56 32 666 510</p>
-				<a class="btn btn-primary btn-center" href="<?php echo get_permalink( get_page_by_path( 'Contacto' ) ) ?>" role="button">Escríbenos</a>
-		</div>
-			
+		<div rel="address" class="direccion" style="display: block; margin: 0 auto; text-align: center;">
+			<div style="color: #FFF; padding: 0 30%">
+					<span class="icn icn-mapa"></span> Km. 4 Camino Concon - Quintero<br>
+					<span class="icn icn-mapa"></span> Matta 12, Recreo, Viña del Mar<br>
+					Valparaíso, Chile<br>
+					+56 32 666 510<br>
+					<br>
+					<a class="btn btn-primary btn-center" href="<?php echo get_permalink( get_page_by_path( 'Contacto' ) ) ?>" role="button">Escríbenos</a>
+			</div>
+		</div>	
 
 				
 		<!-- LLAMAR ÚLTIMOS POST -->
